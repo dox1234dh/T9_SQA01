@@ -154,20 +154,20 @@ width:150px
   margin-top: 12px;
 }
 .over-menu .left{
-  background: url(Images/over-left-menu.png) no-repeat top left;
+  background: url(https://qldt.ptit.edu.vn/App_Themes/Standard/Images/over-left-menu.png) no-repeat top left;
   width: 4px ;
   height: 30px;
   float: left;
 }
 .over-menu .center{
-  background: url(Images/over-center-menu.png) repeat-x top ;
+  background: url(https://qldt.ptit.edu.vn/App_Themes/Standard/Images/over-center-menu.png) repeat-x top ;
   height: 30px;
   line-height: 30px;
   float: left;
   padding: 0px 10px;
 }
 .over-menu .right{
-  background: url(Images/over-right-menu.png) no-repeat  top left ;
+  background: url(https://qldt.ptit.edu.vn/App_Themes/Standard/Images/over-right-menu.png) no-repeat  top left ;
   width: 4px ;
   height: 30px;
   float: left;

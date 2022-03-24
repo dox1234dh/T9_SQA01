@@ -274,7 +274,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=gioithieu">
+                                            <a href="/trangchu.jsp">
                                                 <span id="ctl00_menu_lblTrangChu" class="Label">TRANG CHỦ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -282,11 +282,11 @@
                                     </div>
 
 
-                                    <div id="ctl00_menu_pnDangKyMonHoc" class="out-menu">
+                                    <div id="ctl00_menu_pnDangKyMonHoc" class="over-menu">
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=dkmonhoc">
+                                            <a href="/dkmh.jsp">
                                                 <span id="ctl00_menu_lblDangKyMonHoc"
                                                       class="Label">ĐĂNG KÝ MÔN HỌC</span></a>
                                         </div>
@@ -383,7 +383,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=thaydoittcn">
+                                            <a href="/ttcn.jsp">
                                                 <span id="ctl00_menu_lblThayDoiTTCN" class="Label">SỬA TT CÁ NHÂN</span></a>
                                         </div>
                                         <div class="right"></div>
