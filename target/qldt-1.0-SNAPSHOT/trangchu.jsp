@@ -399,7 +399,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=dkmonhoc">
+                                            <a href="/dkmh.jsp">
                                                 <span id="ctl00_menu_lblDangKyMonHoc"
                                                       class="Label">ĐĂNG KÝ MÔN HỌC</span></a>
                                         </div>
@@ -557,7 +557,7 @@
         id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelMessageBox" class="confirmBox"
         style="display: none; position: fixed; z-index: 100001;">
 	<div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelHeader" class="header"
-         style="background: url(Images/header.png);repeat-x 0px -200px;">
+         style="background: url(./source-home/Images/header.png);repeat-x 0px -200px;">
 		<div class="msg">
 			<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lblPopupHeader" class="Label"
                   style="color:White;font-family:Arial Black;"></span>
