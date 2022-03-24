@@ -299,7 +299,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=thoikhoabieu">
+                                            <a href="/tkb.jsp">
                                                 <span id="ctl00_menu_lblThoiKhoaBieu" class="Label">XEM TKB</span></a>
                                         </div>
                                         <div class="right"></div>
