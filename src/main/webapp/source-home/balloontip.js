@@ -99,7 +99,7 @@ function initalizetooltip(){
 var all_links=document.getElementsByTagName("a")
 if (enablearrowhead){
 tiparrow=document.createElement("img")
-tiparrow.setAttribute("src", arrowheadimg[0])
+// tiparrow.setAttribute("src", arrowheadimg[0])
 tiparrow.setAttribute("id", "arrowhead")
 document.body.appendChild(tiparrow)
 }

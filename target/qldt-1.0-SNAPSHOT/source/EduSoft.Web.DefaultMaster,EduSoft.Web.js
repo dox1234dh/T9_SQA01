@@ -5,7 +5,7 @@ Object.extend(EduSoft.Web.DefaultMaster_class.prototype, Object.extend(new AjaxP
 	CheckGoogle: function(token) {
 		return this.invoke("CheckGoogle", {"token":token}, this.CheckGoogle.getArguments().slice(1));
 	},
-	url: '/ajaxpro/EduSoft.Web.DefaultMaster,EduSoft.Web.ashx'
+	url: './source/EduSoft.Web.DefaultMaster,EduSoft.Web.ashx'
 }));
 EduSoft.Web.DefaultMaster = new EduSoft.Web.DefaultMaster_class();
 

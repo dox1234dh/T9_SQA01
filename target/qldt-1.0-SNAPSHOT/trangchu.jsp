@@ -31,6 +31,7 @@
             type="text/javascript"></script>
     <script src="source-home/balloontip.js"
             type="text/javascript"></script>
+    <script src="js/login.js"></script>
     <link href="./source-home/balloontip.css"
           rel="stylesheet" type="text/css">
     <title>
@@ -85,7 +86,7 @@
         });
     </script>
 
-    <link href="./source-home/WebResource-home.axd"
+    <link href="./source-home/WebResource.axd"
           rel="stylesheet" type="text/css">
     <link href="./source-home/Standard.css"
           type="text/css" rel="stylesheet">
@@ -154,7 +155,7 @@
     </script>
 
 
-    <script src="./source-home/WebResource-home(1).axd"
+    <script src="./source-home/WebResource(1).axd"
             type="text/javascript"></script>
 
 
@@ -176,16 +177,16 @@
             var imgType = $get('ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl02');
             if (type.toLowerCase() == 'success') {
                 headerText.innerHTML = 'Successful';
-                imgType.src = '/WebResource-home.axd?d=IHSRFx29f-8Idaqq2jLAd5yYHlDOVqVtXMrbmNLYggGAmihdtlW2Xd4KrmbyfrywBHGscCQKjICHUMgwyTQmM5yQ-3OvD66TKHY8tUHhd8YOXzKATvKL0-zE0mTbmeWm89gigMRTcjnJ17m5jVW11qVGcGz6pML0lJDgx7HiZ4WJ5A0F0&t=637692950620000000';
+                imgType.src = '/WebResource.axd?d=IHSRFx29f-8Idaqq2jLAd5yYHlDOVqVtXMrbmNLYggGAmihdtlW2Xd4KrmbyfrywBHGscCQKjICHUMgwyTQmM5yQ-3OvD66TKHY8tUHhd8YOXzKATvKL0-zE0mTbmeWm89gigMRTcjnJ17m5jVW11qVGcGz6pML0lJDgx7HiZ4WJ5A0F0&t=637692950620000000';
             } else if (type.toLowerCase() == 'error') {
                 headerText.innerHTML = 'Error';
-                imgType.src = '/WebResource-home.axd?d=tFrnX03yqL11SknJbybxFmb9G-MC_ao7_45poBm7UammrbnVmRxM83-4ulTr8gypSxgi6LrFd9ap8ayJ_SXL63jaseqUaxndaWZCfhYAhatRs_wXjgiKZ51rCI22OJCxhHHWySR-cqFRebCsapG6XiJuq_w-3HIUBq-vEO_g2yDgZIZo0&t=637692950620000000';
+                imgType.src = '/WebResource.axd?d=tFrnX03yqL11SknJbybxFmb9G-MC_ao7_45poBm7UammrbnVmRxM83-4ulTr8gypSxgi6LrFd9ap8ayJ_SXL63jaseqUaxndaWZCfhYAhatRs_wXjgiKZ51rCI22OJCxhHHWySR-cqFRebCsapG6XiJuq_w-3HIUBq-vEO_g2yDgZIZo0&t=637692950620000000';
             } else if (type.toLowerCase() == 'warning') {
                 headerText.innerHTML = 'Warning';
-                imgType.src = '/WebResource-home.axd?d=7jTq3mgaYwIeCQfsfNiHxec9hBYcj4L3zxSEWOYY0G6REKE-nkM4GS04cQQosdbF9hohDWBrRgwFR9NMmXR_fSmfQ1vpuwNAyNW141UsGb_9DwM7Ibw44wo6C78qWI97hkWd8MPk74H3AiZOuj-lXsYN9emu8x3EIkhX8NKFzbTUJzLY0&t=637692950620000000';
+                imgType.src = '/WebResource.axd?d=7jTq3mgaYwIeCQfsfNiHxec9hBYcj4L3zxSEWOYY0G6REKE-nkM4GS04cQQosdbF9hohDWBrRgwFR9NMmXR_fSmfQ1vpuwNAyNW141UsGb_9DwM7Ibw44wo6C78qWI97hkWd8MPk74H3AiZOuj-lXsYN9emu8x3EIkhX8NKFzbTUJzLY0&t=637692950620000000';
             } else {
                 headerText.innerHTML = 'Information';
-                imgType.src = '/WebResource-home.axd?d=7jTq3mgaYwIeCQfsfNiHxec9hBYcj4L3zxSEWOYY0G6REKE-nkM4GS04cQQosdbF9hohDWBrRgwFR9NMmXR_fSmfQ1vpuwNAyNW141UsGb_9DwM7Ibw44wo6C78qWI97hkWd8MPk74H3AiZOuj-lXsYN9emu8x3EIkhX8NKFzbTUJzLY0&t=637692950620000000';
+                imgType.src = '/WebResource.axd?d=7jTq3mgaYwIeCQfsfNiHxec9hBYcj4L3zxSEWOYY0G6REKE-nkM4GS04cQQosdbF9hohDWBrRgwFR9NMmXR_fSmfQ1vpuwNAyNW141UsGb_9DwM7Ibw44wo6C78qWI97hkWd8MPk74H3AiZOuj-lXsYN9emu8x3EIkhX8NKFzbTUJzLY0&t=637692950620000000';
             }
 
             $find('ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ajaxModal').show();
@@ -201,20 +202,20 @@
             src="./source-home/core.ashx"></script>
     <script type="text/javascript"
             src="./source-home/converter.ashx"></script>
-    <script type="text/javascript"
-            src="./source-home/EduSoft.Web.DefaultMaster,EduSoft.Web.ashx"></script>
-    <script type="text/javascript"
-            src="./source-home/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>
-    <script type="text/javascript"
-            src="./source-home/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx"></script>
-    <script type="text/javascript"
-            src="./source-home/EduSoft.Web.UC.DangNhap,EduSoft.Web.ashx"></script>
-    <script type="text/javascript"
-            src="./source-home/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>
+<%--    <script type="text/javascript"--%>
+<%--            src="./source-home/EduSoft.Web.DefaultMaster,EduSoft.Web.ashx"></script>--%>
+<%--    <script type="text/javascript"--%>
+<%--            src="./source-home/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>--%>
+<%--    <script type="text/javascript"--%>
+<%--            src="./source-home/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx"></script>--%>
+<%--    <script type="text/javascript"--%>
+<%--            src="./source-home/EduSoft.Web.UC.DangNhap,EduSoft.Web.ashx"></script>--%>
+<%--    <script type="text/javascript"--%>
+<%--            src="./source-home/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>--%>
 
-    <script src="./source-home/ScriptResource-home.axd"
+    <script src="./source-home/ScriptResource.axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(1).axd"
+    <script src="./source-home/ScriptResource(1).axd"
             type="text/javascript"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -222,25 +223,25 @@
         //]]>
     </script>
 
-    <script src="./source-home/ScriptResource-home(2).axd"
+    <script src="./source-home/ScriptResource(2).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(3).axd"
+    <script src="./source-home/ScriptResource(3).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(4).axd"
+    <script src="./source-home/ScriptResource(4).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(5).axd"
+    <script src="./source-home/ScriptResource(5).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(6).axd"
+    <script src="./source-home/ScriptResource(6).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(7).axd"
+    <script src="./source-home/ScriptResource(7).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(8).axd"
+    <script src="./source-home/ScriptResource(8).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(9).axd"
+    <script src="./source-home/ScriptResource(9).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(10).axd"
+    <script src="./source-home/ScriptResource(10).axd"
             type="text/javascript"></script>
-    <script src="./source-home/ScriptResource-home(11).axd"
+    <script src="./source-home/ScriptResource(11).axd"
             type="text/javascript"></script>
     <div>
 
@@ -301,18 +302,9 @@
                                             }
 
 
-                                            function signOutGoogle(dest) {
-                                                var url = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue='
-                                                    + decodeURIComponent(dest) + 'page=gioithieu';
+                                            function signOutGoogle(desc) {
+                                                var url = 'http://localhost:8080/index.jsp';
                                                 document.location.href = url;
-
-                                                //gapi.load('auth2', function () {
-                                                //    gapi.auth2.init();
-                                                //    var auth = gapi.auth2.GoogleAuth;
-                                                //    auth.signOut().then(function () {
-                                                //        location = decodeURIComponent(dest) + 'page=gioithieu';
-                                                //    });
-                                                //});
                                             }
                                         </script>
 
@@ -326,20 +318,16 @@
                                                  alt="Vietnamese" onclick="changeLanguage_click(&#39;_vi&#39;)"
                                                  id="imgVi" title="Vietnamese">
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<a
-                                                id="ctl00_Header1_Logout1_lbtnThongBao"
-                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnThongBao&#39;,&#39;&#39;)"
-                                                style="color:MistyRose;font-size:12px;font-style:italic;font-family: &#39;Tahoma&#39;, Times, serif">Xem
-                                            thông báo</a><span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
-                                                               style="color:MistyRose;"> | </span>
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;" onload="setName()"></span>&nbsp;
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"
+                                               href="http://localhost:8080/ttcn.jsp"
                                                style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
                                                 đổi mật khẩu</a>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
+                                               href="http://localhost:8080/index.jsp"
+                                               onclick="clearSession()"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
                                             &nbsp;<select id="selectFont"
                                                           style="font-size: 11px; width: 100px; color: #000080;"
@@ -563,7 +551,7 @@
                   style="color:White;font-family:Arial Black;"></span>
 		</div><input type="image" name="ctl00$ContentPlaceHolder1$ctl00$MessageBox1$imgCloseButton"
                      id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_imgCloseButton" class="close"
-                     src="./source-home/WebResource-home(2).axd"
+                     src="./source-home/WebResource(2).axd"
                      style="border-width:0px;">
 	</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelBody" class="body"
                style="background-color:#E1E5F0;">
@@ -580,7 +568,7 @@
 		<div class="right" style="background-color:#E1E5F0;">
 			<input type="image" name="ctl00$ContentPlaceHolder1$ctl00$MessageBox1$btnOk"
                    id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_btnOk" class="button_small_active"
-                   src="./source-home/WebResource-home(3).axd"
+                   src="./source-home/WebResource(3).axd"
                    style="height:22px;width:70px;border-width:0px;">
 		</div>
 	</div>
@@ -678,20 +666,20 @@
                             // initialize plugins
                             $(function () {
                                 var tm = setTimeout(function () {
-                                    EduSoft.Web.UC.GioiThieu.GetHitCounter(function (ret) {
-                                        if (ret?.value) {
-                                            var st = "00000000" + ret.value;
-                                            st = st?.substring(st.length - 9);
-                                            var ltCount = document.getElementById("ltHitCounter");
-                                            if (!ltCount) return;
-                                            var tb = '<table cellSpacing="1" cellPadding="1" border="1" borderWidth="" borderColor="White" style="color:White;background-color:Black;border-color:White;"><TR>';
-                                            for (i = 0; i < st.length; i++) {
-                                                tb += '<TD align="middle">' + st.substring(i, i + 1) + '</TD>';
-                                            }
-                                            tb += '</TR></table>';
-                                            ltCount.innerHTML = tb;
-                                        }
-                                    });
+                                    // EduSoft.Web.UC.GioiThieu.GetHitCounter(function (ret) {
+                                    //     if (ret?.value) {
+                                    //         var st = "00000000" + ret.value;
+                                    //         st = st?.substring(st.length - 9);
+                                    //         var ltCount = document.getElementById("ltHitCounter");
+                                    //         if (!ltCount) return;
+                                    //         var tb = '<table cellSpacing="1" cellPadding="1" border="1" borderWidth="" borderColor="White" style="color:White;background-color:Black;border-color:White;"><TR>';
+                                    //         for (i = 0; i < st.length; i++) {
+                                    //             tb += '<TD align="middle">' + st.substring(i, i + 1) + '</TD>';
+                                    //         }
+                                    //         tb += '</TR></table>';
+                                    //         ltCount.innerHTML = tb;
+                                    //     }
+                                    // });
                                 }, 1000);
 
                                 try {
@@ -1471,7 +1459,7 @@ ký học kỳ phụ 2020-2021 (hè 2021)</span>... (<span class="NgayTitle">15/
         ctl00_ContentPlaceHolder1_ctl00_leftMenu_Data.disappearAfter = 500;
         ctl00_ContentPlaceHolder1_ctl00_leftMenu_Data.horizontalOffset = 0;
         ctl00_ContentPlaceHolder1_ctl00_leftMenu_Data.verticalOffset = 0;
-        ctl00_ContentPlaceHolder1_ctl00_leftMenu_Data.iframeUrl = '/WebResource-home.axd?d=-mHn_5QspiPJ2gNCKVjteggeC9sRL1zArqZBs2YXHs5beYIs8M6M4ocJpZCZr9s4DOdiaSITE1I7KNPZC8f2wqdDh141&t=636041026940000000';
+        ctl00_ContentPlaceHolder1_ctl00_leftMenu_Data.iframeUrl = '/WebResource.axd?d=-mHn_5QspiPJ2gNCKVjteggeC9sRL1zArqZBs2YXHs5beYIs8M6M4ocJpZCZr9s4DOdiaSITE1I7KNPZC8f2wqdDh141&t=636041026940000000';
         Sys.Application.add_init(function () {
             $create(AjaxControlToolkit.ModalPopupBehavior, {
                 "BackgroundCssClass": "msgbox_messagemodalbackground",
@@ -1489,6 +1477,7 @@ ký học kỳ phụ 2020-2021 (hè 2021)</span>... (<span class="NgayTitle">15/
 <div id="app" class="zs"></div>
 
 
-<img src="./source-home/arrowdown.gif"
-     id="arrowhead"></body>
+<%--<img src="./source-home/arrowdown.gif"--%>
+<%--     id="arrowhead">--%>
+</body>
 </html>

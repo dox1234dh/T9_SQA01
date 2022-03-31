@@ -9,7 +9,7 @@ Object.extend(EduSoft.Web.UC.Logout_class.prototype, Object.extend(new AjaxPro.A
 	ChangeFont: function(font) {
 		return this.invoke("ChangeFont", {"font":font}, this.ChangeFont.getArguments().slice(1));
 	},
-	url: '/ajaxpro/EduSoft.Web.UC.Logout,EduSoft.Web.ashx'
+	url: '.source/EduSoft.Web.UC.Logout,EduSoft.Web.ashx'
 }));
 EduSoft.Web.UC.Logout = new EduSoft.Web.UC.Logout_class();
 

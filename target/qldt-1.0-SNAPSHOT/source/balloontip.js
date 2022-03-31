@@ -71,8 +71,8 @@ displaytiparrow()
 }
 
 function displaytiparrow(){ //function to display optional arrow image associated with tooltip
-tiparrow=document.getElementById("arrowhead")
-tiparrow.src=(edgeoffsety!=0)? arrowheadimg[0] : arrowheadimg[1]
+// tiparrow=document.getElementById("arrowhead")
+// tiparrow.src=(edgeoffsety!=0)? arrowheadimg[0] : arrowheadimg[1]
 var ieshadowwidth=(dropmenuobj.filters && dropmenuobj.filters[0])? dropmenuobj.filters[0].Strength-1 : 0
 //modify "left" value depending on whether there's no room on right edge of browser to display it, respectively
 tiparrow.style.left=(edgeoffsetx!=0)? parseInt(dropmenuobj.style.left)+dropmenuobj.offsetWidth-tiparrow.offsetWidth-10+"px" : parseInt(dropmenuobj.style.left)+5+"px"
@@ -99,7 +99,7 @@ function initalizetooltip(){
 var all_links=document.getElementsByTagName("a")
 if (enablearrowhead){
 tiparrow=document.createElement("img")
-tiparrow.setAttribute("src", arrowheadimg[0])
+// tiparrow.setAttribute("src", arrowheadimg[0])
 tiparrow.setAttribute("id", "arrowhead")
 document.body.appendChild(tiparrow)
 }

@@ -6,7 +6,7 @@ Object.extend(EduSoft.Web.UC.GioiThieu_class.prototype, Object.extend(new AjaxPr
 	GetHitCounter: function() {
 		return this.invoke("GetHitCounter", {}, this.GetHitCounter.getArguments().slice(0));
 	},
-	url: '/ajaxpro/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx'
+	url: './source-home/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx'
 }));
 EduSoft.Web.UC.GioiThieu = new EduSoft.Web.UC.GioiThieu_class();
 

@@ -74,7 +74,7 @@
 </head>
 
 <body background="./source/background.png" onload="ShowMess()">
-<form name="aspnetForm" method="post" action="https://qldt.ptit.edu.vn/default.aspx?page=dangnhap" id="aspnetForm"
+<form name="aspnetForm" method="post" action="locahost:http://localhost:8081/sinhvien/dangnhap" id="aspnetForm"
       enctype="multipart/form-data">
     <div>
         <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
@@ -343,6 +343,7 @@
                                         width="475px">
                                         <table>
                                             <tbody>
+
                                             <tr>
                                                 <td width="95px" align="center">&nbsp;
                                                     <span id="ctl00_ContentPlaceHolder1_ctl00_lblTenDangNhap"
