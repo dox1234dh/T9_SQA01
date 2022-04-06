@@ -1603,8 +1603,8 @@
                                                                                 runat="server">TH</asp:label></td>
                                                     <td width="35px"><asp:label id="lblG1Thu"
                                                                                 runat="server">Thứ </asp:label></td>
-                                                    <td width="40px"><asp:label id="lblG1TBD"
-                                                                                runat="server">Tiết BD</asp:label></td>
+                                                    <td width="50px"><asp:label id="lblG1TBD"
+                                                                                runat="server">Tên kíp học</asp:label></td>
                                                     <td width="30px"><asp:label id="lblG1ST"
                                                                                 runat="server">ST</asp:label></td>
                                                     <td width="60px"><asp:label id="lblG1Phong"
@@ -1617,8 +1617,8 @@
                                             </table>
                                         </div>
                                         <div style="height: 320px" class="grid-roll">
-                                            <div id="divTDK"></div>
-
+                                            <div id="divTDK">
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
