@@ -57,7 +57,7 @@ Object.extend(EduSoft.Web.UC.DangKyMonHoc_class.prototype, Object.extend(new Aja
 	LoadNhomTo: function(maMH) {
 		return this.invoke("LoadNhomTo", {"maMH":maMH}, this.LoadNhomTo.getArguments().slice(1));
 	},
-	url: '/ajaxpro/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx'
+	url: './source-dkmh/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx'
 }));
 EduSoft.Web.UC.DangKyMonHoc = new EduSoft.Web.UC.DangKyMonHoc_class();
 

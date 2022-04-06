@@ -15,15 +15,15 @@
 
         var gv = 'False';
     </script>
-    <script type="text/javascript" src="./source-tkb/platform.js.tải xuống" async="" defer=""
+    <script type="text/javascript" src="./source-tkb/platform.js" async="" defer=""
             gapi_processed="true"></script>
     <meta name="google-signin-scope" content="profile email">
     <meta id="ctl00_metaGoogle" name="google-signin-client_id">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://qldt.ptit.edu.vn/Images/Edusoft.gif">
-    <script src="./source-tkb/jquery-2.2.1.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-tkb/dialog.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-tkb/checkdate.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-tkb/balloontip.js.tải xuống" type="text/javascript"></script>
+    <script src="./source-tkb/jquery-2.2.1.js" type="text/javascript"></script>
+    <script src="./source-tkb/dialog.js" type="text/javascript"></script>
+    <script src="./source-tkb/checkdate.js" type="text/javascript"></script>
+    <script src="./source-tkb/balloontip.js" type="text/javascript"></script>
     <link href="./source-tkb/balloontip.css" rel="stylesheet" type="text/css">
     <title>
         Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
@@ -250,7 +250,7 @@
                                                 //});
                                             }
                                         </script>
-
+                                        <script type="text/javascript" src="js/login.js"></script>
                                         <div id="ctl00_Header1_Logout1_dLog" class="logout"
                                              style="text-align: right; margin-bottom: 0px">
 
@@ -261,20 +261,18 @@
                                                  onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"
                                                  title="Vietnamese">
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<a
-                                                id="ctl00_Header1_Logout1_lbtnThongBao"
-                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnThongBao&#39;,&#39;&#39;)"
-                                                style="color:MistyRose;font-size:12px;font-style:italic;font-family: &#39;Tahoma&#39;, Times, serif">Xem
-                                            thông báo</a><span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;"></span>&nbsp;
+                                            <span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
                                                                style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"
+                                               href="/ttcn.jsp"
                                                style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
                                                 đổi mật khẩu</a>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
+                                               href="/index.jsp"
+                                               onclick="clearSession()"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
                                             &nbsp;<select id="selectFont"
                                                           style="font-size: 11px; width: 100px; color: #000080;"
@@ -511,7 +509,7 @@
                style="background-color:#E1E5F0;">
 		<div class="body-left" style="background-color:#E1E5F0;">
 			<img id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl02"
-                 src="https://qldt.ptit.edu.vn/Default.aspx?page=thoikhoabieu" style="border-width:0px;">
+                 src="/tkb.jsp" style="border-width:0px;">
 		</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl03" class="body-right"
                    style="background-color:#E1E5F0;">
 			<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lblMessageDisplay" class="Label"
@@ -1586,5 +1584,6 @@
 </form>
 
 
-<img src="./source-tkb/arrowdown.gif" id="arrowhead"></body>
+<%--<img src="./source-tkb/arrowdown.gif" id="arrowhead">--%>
+</body>
 </html>

@@ -318,28 +318,28 @@
                                                  alt="Vietnamese" onclick="changeLanguage_click(&#39;_vi&#39;)"
                                                  id="imgVi" title="Vietnamese">
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;" onload="setName()"></span>&nbsp;
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;background-color: black;" onload="setName()"></span>&nbsp;
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
                                                href="http://localhost:8080/ttcn.jsp"
-                                               style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
+                                               style="background-color: black;color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
                                                 đổi mật khẩu</a>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
                                                href="http://localhost:8080/index.jsp"
                                                onclick="clearSession()"
-                                               style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
-                                            &nbsp;<select id="selectFont"
-                                                          style="font-size: 11px; width: 100px; color: #000080;"
-                                                          onchange="selectFont_change()">
-                                            <option value="uni">-------Font-------</option>
-                                            <option value="uni" selected="">Font Unicode</option>
-                                            <option value="abc">Font ABC</option>
-                                            <option value="vni">Font Vni</option>
-                                            <option value="not">Text không
-                                                dấu
-                                            </option>
-                                        </select>
+                                               style="background-color: black;color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
+<%--                                            &nbsp;<select id="selectFont"--%>
+<%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
+<%--                                                          onchange="selectFont_change()">--%>
+<%--                                            <option value="uni">-------Font-------</option>--%>
+<%--                                            <option value="uni" selected="">Font Unicode</option>--%>
+<%--                                            <option value="abc">Font ABC</option>--%>
+<%--                                            <option value="vni">Font Vni</option>--%>
+<%--                                            <option value="not">Text không--%>
+<%--                                                dấu--%>
+<%--                                            </option>--%>
+<%--                                        </select>--%>
                                         </div>
 
                                     </td>

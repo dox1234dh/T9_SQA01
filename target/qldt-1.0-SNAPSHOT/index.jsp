@@ -16,6 +16,7 @@
     <script src="source/dialog.js" type="text/javascript"></script>
     <script src="source/checkdate.js" type="text/javascript"></script>
     <script src="source/balloontip.js" type="text/javascript"></script>
+    <script src="./js/loading.js" type="text/javascript"></script>
     <link href="./source/balloontip.css" rel="stylesheet" type="text/css">
     <title>
         Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN

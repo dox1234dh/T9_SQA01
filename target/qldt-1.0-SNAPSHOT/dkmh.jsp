@@ -15,15 +15,15 @@
 
         var gv = 'False';
     </script>
-    <script type="text/javascript" src="./source-dkmh/platform.js.tải xuống" async="" defer=""
+    <script type="text/javascript" src="./source-dkmh/platform.js" async="" defer=""
             gapi_processed="true"></script>
     <meta name="google-signin-scope" content="profile email">
     <meta id="ctl00_metaGoogle" name="google-signin-client_id">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://qldt.ptit.edu.vn/Images/Edusoft.gif">
-    <script src="./source-dkmh/jquery-2.2.1.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-dkmh/dialog.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-dkmh/checkdate.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-dkmh/balloontip.js.tải xuống" type="text/javascript"></script>
+    <script src="./source-dkmh/jquery-2.2.1.js" type="text/javascript"></script>
+    <script src="./source-dkmh/dialog.js" type="text/javascript"></script>
+    <script src="./source-dkmh/checkdate.js" type="text/javascript"></script>
+    <script src="./source-dkmh/balloontip.js" type="text/javascript"></script>
     <link href="./source-dkmh/balloontip.css" rel="stylesheet" type="text/css">
     <title>
         Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
@@ -38,43 +38,43 @@
                 alert('Vui lòng tắt và mở lại trình duyệt!');
         }
 
-        $(function () {
-            if (typeof AjaxPro != 'undefined' && AjaxPro && AjaxPro.Request && AjaxPro.Request.prototype) {
-                AjaxPro.Request.prototype.doStateChange = function () {
-                    this.onStateChanged(this.xmlHttp.readyState, this);
-                    if (this.xmlHttp.readyState != 4 || !this.isRunning) {
-                        return;
-                    }
-                    this.duration = new Date().getTime() - this.__start;
-                    if (this.timeoutTimer != null) {
-                        clearTimeout(this.timeoutTimer);
-                    }
-                    var res = this.getEmptyRes();
-                    if (this.xmlHttp.status == 200 && (this.xmlHttp.statusText == "OK" || !this.xmlHttp.statusText)) {
-                        res = this.createResponse(res);
-                    } else {
-                        res = this.createResponse(res, true);
-                        res.error = {
-                            Message: this.xmlHttp.statusText,
-                            Type: "ConnectFailure",
-                            Status: this.xmlHttp.status
-                        };
-                    }
-                    this.endRequest(res);
-                };
-            }
-            //gapi.load('auth2', function () {
-            //    gapi.auth2.GoogleUser(u => {
-            //        u.getAuthResponse(a => {
-            //            EduSoft.Web.DefaultMaster.CheckGoogle(a.id_token, x => {
-            //                if (x.value) {
-            //                    self.location = decodeURIComponent(x.value);
-            //                }
-            //            });
-            //        });
-            //    });
-            //}
-        });
+        // $(function () {
+        //     if (typeof AjaxPro != 'undefined' && AjaxPro && AjaxPro.Request && AjaxPro.Request.prototype) {
+        //         AjaxPro.Request.prototype.doStateChange = function () {
+        //             this.onStateChanged(this.xmlHttp.readyState, this);
+        //             if (this.xmlHttp.readyState != 4 || !this.isRunning) {
+        //                 return;
+        //             }
+        //             this.duration = new Date().getTime() - this.__start;
+        //             if (this.timeoutTimer != null) {
+        //                 clearTimeout(this.timeoutTimer);
+        //             }
+        //             var res = this.getEmptyRes();
+        //             if (this.xmlHttp.status == 200 && (this.xmlHttp.statusText == "OK" || !this.xmlHttp.statusText)) {
+        //                 res = this.createResponse(res);
+        //             } else {
+        //                 res = this.createResponse(res, true);
+        //                 res.error = {
+        //                     Message: this.xmlHttp.statusText,
+        //                     Type: "ConnectFailure",
+        //                     Status: this.xmlHttp.status
+        //                 };
+        //             }
+        //             this.endRequest(res);
+        //         };
+        //     }
+        //gapi.load('auth2', function () {
+        //    gapi.auth2.GoogleUser(u => {
+        //        u.getAuthResponse(a => {
+        //            EduSoft.Web.DefaultMaster.CheckGoogle(a.id_token, x => {
+        //                if (x.value) {
+        //                    self.location = decodeURIComponent(x.value);
+        //                }
+        //            });
+        //        });
+        //    });
+        //}
+        // });
     </script>
 
     <link href="./source-dkmh/Standard.css" type="text/css" rel="stylesheet">
@@ -120,6 +120,7 @@
     <script type="text/javascript" src="./source-dkmh/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>
     <script type="text/javascript" src="./source-dkmh/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx"></script>
     <script type="text/javascript" src="./source-dkmh/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>
+    <script type="text/javascript" src="./js/getLsMonhoc.js"></script>
 
     <script src="./source-dkmh/ScriptResource.axd" type="text/javascript"></script>
     <script type="text/javascript">
@@ -202,7 +203,7 @@
                                                 //});
                                             }
                                         </script>
-
+                                        <script type="text/javascript" src="js/login.js"></script>
                                         <div id="ctl00_Header1_Logout1_dLog" class="logout"
                                              style="text-align: right; margin-bottom: 0px">
 
@@ -213,20 +214,18 @@
                                                  onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"
                                                  title="Vietnamese">
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<a
-                                                id="ctl00_Header1_Logout1_lbtnThongBao"
-                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnThongBao&#39;,&#39;&#39;)"
-                                                style="color:MistyRose;font-size:12px;font-style:italic;font-family: &#39;Tahoma&#39;, Times, serif">Xem
-                                            thông báo</a><span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
-                                                               style="color:MistyRose;"> | </span>
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;"></span>&nbsp;
+                                            <span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
+                                                  style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"
+                                               href="/ttcn.jsp"
                                                style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
                                                 đổi mật khẩu</a>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
+                                               href="http://localhost:8080/index.jsp"
+                                               onclick="clearSession()"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
                                             &nbsp;<select id="selectFont"
                                                           style="font-size: 11px; width: 100px; color: #000080;"
@@ -471,7 +470,7 @@
                             }
                         </style>
                         <div id="dhtmltooltip"
-                             style="background-image: url(App_Themes/Standard/Images/tooltip.png); text-align: center"></div>
+                             style="background-image: url(https://qldt.ptit.edu.vn/App_Themes/Standard/Images/tooltip.png); text-align: center"></div>
                         <script type="text/javascript">
 
                             var offsetxpoint = -60 //Customize x offset of tooltip
@@ -1064,7 +1063,7 @@
                                 document.body.style.cursor = 'default';
                             }
 
-                            function btnLocTheoMaMH1_click() {
+                            function btnLocTheoTenMh_click() {
                                 var monHocLoc = document.getElementById("txtMaMH1");
                                 if (monHocLoc.value == "") {
                                     alert(nhapDKLoc);
@@ -1072,7 +1071,7 @@
                                 } else {
 
                                     document.body.style.cursor = 'wait';
-                                    EduSoft.Web.UC.DangKyMonHoc.LocTheoMonHoc(monHocLoc.value, ShowTatCaTDK_callback);
+                                    getLsMonhoc(monHocLoc.value)
                                 }
                             }
 
@@ -1114,116 +1113,116 @@
 
                             var mondphoc = 0;
 
-                            function LoadDSKhoaLop_load(ressControl) {
+                            // function LoadDSKhoaLop_load(ressControl) {
+                            //
+                            //     var resArr = ressControl;
+                            //
+                            //     if (ressControl != "") {
+                            //         resArr = ressControl.split("|");
+                            //
+                            //         vuotTC = resArr[5];
+                            //         trungTKBChoPhep = resArr[6];
+                            //         trungTKBKChoPhep = resArr[7];
+                            //         xoaKhongHopLe = resArr[8];
+                            //         confirmXoa = resArr[9];
+                            //         confirmXoaTatCa = resArr[10];
+                            //         nhapDKLoc = resArr[11];
+                            //         serverBusy = resArr[12];
+                            //         hinhThucDongHP = resArr[13];
+                            //         hoiDongHP = resArr[14];
+                            //         trungMonNC = resArr[15];
+                            //         waitingCheck = resArr[16];
+                            //         errorOutOffTime = resArr[17];
+                            //         errorChuyenNganhChinh = resArr[18];
+                            //         errorChuyenNganhChuyenSau = resArr[19];
+                            //         errorCaiThienDiemD = "Môn học cải thiện không thỏa quy chế";//resArr[20];
+                            //         errorCaiThienHocKy = resArr[21];
+                            //         errorMucDoTrungTKB0 = resArr[22];
+                            //         errorMucDoTrungTKB1 = resArr[23];
+                            //         errorTrungLichThiCam = resArr[24];
+                            //         errorTrungLichThiLuaChon = resArr[25];
+                            //         errorTrungLichThiVuot = resArr[26];
+                            //         textKhongTheXoa = resArr[27];
+                            //         textKhongMoMH = resArr[28];
+                            //         errorGioiHanSTC = resArr[29];
+                            //         errorGioiHanSoTCThayDoi = resArr[30];
+                            //     }
+                            //     mondphoc = resArr[31];
+                            //     var divChonKhoa = document.getElementById("divKhoa");
+                            //     var divChonNganh = document.getElementById("divNganh");
+                            //     if (mondphoc == 1) {
+                            //         EduSoft.Web.UC.DangKyMonHoc.LoadChuongTrinhDaoTaoHeNganh(LoadDanhSachKhoaLop_callback);
+                            //     } else if (mondphoc == 2) {
+                            //         EduSoft.Web.UC.DangKyMonHoc.LoadChuongTrinhDaoTaoKhoiLop(LoadDanhSachKhoaLop_callback);
+                            //     } else {
+                            //         if (divChonKhoa != null) {
+                            //             divChonKhoa.style.display = "none";
+                            //             divChonNganh.style.display = "none";
+                            //         }
+                            //         EduSoft.Web.UC.DangKyMonHoc.LoadDanhSachKhoaLop(LoadDanhSachKhoaLop_callback);
+                            //     }
+                            // }
 
-                                var resArr = ressControl;
-
-                                if (ressControl != "") {
-                                    resArr = ressControl.split("|");
-
-                                    vuotTC = resArr[5];
-                                    trungTKBChoPhep = resArr[6];
-                                    trungTKBKChoPhep = resArr[7];
-                                    xoaKhongHopLe = resArr[8];
-                                    confirmXoa = resArr[9];
-                                    confirmXoaTatCa = resArr[10];
-                                    nhapDKLoc = resArr[11];
-                                    serverBusy = resArr[12];
-                                    hinhThucDongHP = resArr[13];
-                                    hoiDongHP = resArr[14];
-                                    trungMonNC = resArr[15];
-                                    waitingCheck = resArr[16];
-                                    errorOutOffTime = resArr[17];
-                                    errorChuyenNganhChinh = resArr[18];
-                                    errorChuyenNganhChuyenSau = resArr[19];
-                                    errorCaiThienDiemD = "Môn học cải thiện không thỏa quy chế";//resArr[20];
-                                    errorCaiThienHocKy = resArr[21];
-                                    errorMucDoTrungTKB0 = resArr[22];
-                                    errorMucDoTrungTKB1 = resArr[23];
-                                    errorTrungLichThiCam = resArr[24];
-                                    errorTrungLichThiLuaChon = resArr[25];
-                                    errorTrungLichThiVuot = resArr[26];
-                                    textKhongTheXoa = resArr[27];
-                                    textKhongMoMH = resArr[28];
-                                    errorGioiHanSTC = resArr[29];
-                                    errorGioiHanSoTCThayDoi = resArr[30];
-                                }
-                                mondphoc = resArr[31];
-                                var divChonKhoa = document.getElementById("divKhoa");
-                                var divChonNganh = document.getElementById("divNganh");
-                                if (mondphoc == 1) {
-                                    EduSoft.Web.UC.DangKyMonHoc.LoadChuongTrinhDaoTaoHeNganh(LoadDanhSachKhoaLop_callback);
-                                } else if (mondphoc == 2) {
-                                    EduSoft.Web.UC.DangKyMonHoc.LoadChuongTrinhDaoTaoKhoiLop(LoadDanhSachKhoaLop_callback);
-                                } else {
-                                    if (divChonKhoa != null) {
-                                        divChonKhoa.style.display = "none";
-                                        divChonNganh.style.display = "none";
-                                    }
-                                    EduSoft.Web.UC.DangKyMonHoc.LoadDanhSachKhoaLop(LoadDanhSachKhoaLop_callback);
-                                }
-                            }
-
-                            function LoadDanhSachKhoaLop_callback(doituong) {
-                                if (doituong != null) {
-
-                                    if (doituong.value && doituong.value.length > 8 && doituong.value.substring(0, 8) == "BCVTVTHN") {
-                                        doituong = doituong.value.replace("BCVTVTHN", "");
-                                        if (document.getElementById("divMonHoc") != null) {
-                                            document.getElementById("divMonHoc").innerHTML = doituong;
-                                            document.getElementById("divfilters").style.height = "180px";
-                                        }
-                                    } else {
-                                        if (mondphoc == 0 || mondphoc == 3 || mondphoc == 5 || mondphoc == 6) // 2-2-2010 , mdph = 3 => gioi han theo he dao tao
-                                        {
-                                            var ress = doituong.value.split("|||||");
-                                            if (document.getElementById("divKhoa") != null)
-                                                document.getElementById("divKhoa").innerHTML = ress[0];
-                                            if (document.getElementById("divLop") != null)
-                                                document.getElementById("divLop").innerHTML = ress[1];
-
-
-                                            if (ress[2]) {
-                                                var resArr = ress[2].split("|");
-                                                var btnLocMH = document.getElementById("btnLocTheoMaMH1");
-                                                btnLocMH.value = resArr[0];
-                                                var btnLocKhoa = document.getElementById("btnKhoa");
-                                                if (btnLocKhoa != null)
-                                                    btnLocKhoa.value = resArr[1];
-                                                var btnLocLop = document.getElementById("btnLop");
-                                                if (btnLocLop != null)
-                                                    btnLocLop.value = resArr[1];
-                                                var btnLuuDK = document.getElementById("btnLuu");
-                                                btnLuuDK.value = resArr[2];
-                                                var btnXoaDK = document.getElementById("bntXoaChon");
-                                                btnXoaDK.value = resArr[3];
-                                                if (document.getElementById("butLuuNV") != null) {
-                                                    var btnLuuNV = document.getElementById("butLuuNV");
-                                                    btnLuuNV.value = resArr[4];
-                                                }
-                                            }
-
-                                            // edit 10/2/2011 , DHNL bổ sung thêm điều kiện lọc theo ngành
-                                            if (document.getElementById("divDanhSachDieuKienLoc") != null) {
-                                                document.getElementById("divDanhSachDieuKienLoc").innerHTML = ress[3];
-                                                selectDKLoc_change();
-                                            }
-
-                                            if (document.getElementById("divNganh") != null)
-                                                document.getElementById("divNganh").innerHTML = ress[4];
-
-                                            //end edit
-                                        } else if (mondphoc == 1) // loc theo ctdt he nganh
-                                        {
-                                            var ress = doituong.value.split("|||||");
-                                            document.getElementById("divLTCTHN1").innerHTML = ress[0];
-                                            document.getElementById("divLTCTHN2").innerHTML = ress[1];
-                                        } else if (mondphoc == 2) {
-                                            document.getElementById("divLTCTKhoi").innerHTML = doituong.value;
-                                        }
-                                    }
-                                }
-                            }
+                            // function LoadDanhSachKhoaLop_callback(doituong) {
+                            //     if (doituong != null) {
+                            //
+                            //         if (doituong.value && doituong.value.length > 8 && doituong.value.substring(0, 8) == "BCVTVTHN") {
+                            //             doituong = doituong.value.replace("BCVTVTHN", "");
+                            //             if (document.getElementById("divMonHoc") != null) {
+                            //                 document.getElementById("divMonHoc").innerHTML = doituong;
+                            //                 document.getElementById("divfilters").style.height = "180px";
+                            //             }
+                            //         } else {
+                            //             if (mondphoc == 0 || mondphoc == 3 || mondphoc == 5 || mondphoc == 6) // 2-2-2010 , mdph = 3 => gioi han theo he dao tao
+                            //             {
+                            //                 var ress = doituong.value.split("|||||");
+                            //                 if (document.getElementById("divKhoa") != null)
+                            //                     document.getElementById("divKhoa").innerHTML = ress[0];
+                            //                 if (document.getElementById("divLop") != null)
+                            //                     document.getElementById("divLop").innerHTML = ress[1];
+                            //
+                            //
+                            //                 if (ress[2]) {
+                            //                     var resArr = ress[2].split("|");
+                            //                     var btnLocMH = document.getElementById("btnLocTheoMaMH1");
+                            //                     btnLocMH.value = resArr[0];
+                            //                     var btnLocKhoa = document.getElementById("btnKhoa");
+                            //                     if (btnLocKhoa != null)
+                            //                         btnLocKhoa.value = resArr[1];
+                            //                     var btnLocLop = document.getElementById("btnLop");
+                            //                     if (btnLocLop != null)
+                            //                         btnLocLop.value = resArr[1];
+                            //                     var btnLuuDK = document.getElementById("btnLuu");
+                            //                     btnLuuDK.value = resArr[2];
+                            //                     var btnXoaDK = document.getElementById("bntXoaChon");
+                            //                     btnXoaDK.value = resArr[3];
+                            //                     if (document.getElementById("butLuuNV") != null) {
+                            //                         var btnLuuNV = document.getElementById("butLuuNV");
+                            //                         btnLuuNV.value = resArr[4];
+                            //                     }
+                            //                 }
+                            //
+                            //                 // edit 10/2/2011 , DHNL bổ sung thêm điều kiện lọc theo ngành
+                            //                 if (document.getElementById("divDanhSachDieuKienLoc") != null) {
+                            //                     document.getElementById("divDanhSachDieuKienLoc").innerHTML = ress[3];
+                            //                     selectDKLoc_change();
+                            //                 }
+                            //
+                            //                 if (document.getElementById("divNganh") != null)
+                            //                     document.getElementById("divNganh").innerHTML = ress[4];
+                            //
+                            //                 //end edit
+                            //             } else if (mondphoc == 1) // loc theo ctdt he nganh
+                            //             {
+                            //                 var ress = doituong.value.split("|||||");
+                            //                 document.getElementById("divLTCTHN1").innerHTML = ress[0];
+                            //                 document.getElementById("divLTCTHN2").innerHTML = ress[1];
+                            //             } else if (mondphoc == 2) {
+                            //                 document.getElementById("divLTCTKhoi").innerHTML = doituong.value;
+                            //             }
+                            //         }
+                            //     }
+                            // }
 
 
                             function selectMonHoc_changed() {
@@ -1496,10 +1495,10 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" id="txtMaMH1"
-                                                                   onkeypress="txtMaMH1_keypress(event)">
+                                                                   >
                                                             <input type="button" value="Lọc &gt;&gt;"
                                                                    id="btnLocTheoMaMH1"
-                                                                   onclick="btnLocTheoMaMH1_click()">
+                                                                   onclick="btnLocTheoTenMh_click()">
 
                                                         </td>
                                                     </tr>
@@ -1525,24 +1524,24 @@
                                                                                         name="slmonhoc"
                                                                                         multiple="multiple"
                                                                                         style="width:400px;height:140px">
-                                                                <option value="INT1408">INT1408 - Chuyên đề công nghệ
-                                                                    phần mềm (1TC)
-                                                                </option>
-                                                                <option value="INT1416">INT1416 - Đảm bảo chất lượng
-                                                                    phần mềm (3TC)
-                                                                </option>
-                                                                <option value="INT1427">INT1427 - Kiến trúc và thiết kế
-                                                                    phần mềm (3TC)
-                                                                </option>
-                                                                <option value="INT1448">INT1448 - Phát triển phần mềm
-                                                                    hướng dịch vụ (3TC)
-                                                                </option>
-                                                                <option value="INT1449">INT1449 - Phát triển ứng dụng
-                                                                    cho các thiết bị di động (3TC)
-                                                                </option>
-                                                                <option value="INT1461">INT1461 - Xây dựng các hệ thống
-                                                                    nhúng (3TC)
-                                                                </option>
+<%--                                                                <option value="INT1408">INT1408 - Chuyên đề công nghệ--%>
+<%--                                                                    phần mềm (1TC)--%>
+<%--                                                                </option>--%>
+<%--                                                                <option value="INT1416">INT1416 - Đảm bảo chất lượng--%>
+<%--                                                                    phần mềm (3TC)--%>
+<%--                                                                </option>--%>
+<%--                                                                <option value="INT1427">INT1427 - Kiến trúc và thiết kế--%>
+<%--                                                                    phần mềm (3TC)--%>
+<%--                                                                </option>--%>
+<%--                                                                <option value="INT1448">INT1448 - Phát triển phần mềm--%>
+<%--                                                                    hướng dịch vụ (3TC)--%>
+<%--                                                                </option>--%>
+<%--                                                                <option value="INT1449">INT1449 - Phát triển ứng dụng--%>
+<%--                                                                    cho các thiết bị di động (3TC)--%>
+<%--                                                                </option>--%>
+<%--                                                                <option value="INT1461">INT1461 - Xây dựng các hệ thống--%>
+<%--                                                                    nhúng (3TC)--%>
+<%--                                                                </option>--%>
                                                             </select></div>
                                                             <div id="divDanhSachDieuKienLoc"></div>
 
@@ -2016,7 +2015,7 @@
     </div>
 
 
-    <script language="JavaScript">LoadDSKhoaLop_load('Lọc >>|Lọc >>|Lưu Đăng Ký|Xóa|Lưu|Vượt số tín chỉ tối đa cho phép!|Môn học vừa chọn bị trùng thời khóa biểu. Vẫn tiếp tục chọn?|Môn học vừa chọn bị trùng TKB, không được phép chọn!|Không có môn học nào được chọn để xóa!|Xác nhận xóa các môn đã chọn?|Xác nhận xóa tất cả các môn đã đăng ký?|Vui lòng nhập vào điều kiện cần lọc!|Server đang bận, vui lòng đợi chọn lưu lại lần nữa!|100|Bạn có muốn đóng 100% học phí cho lần đầu, nếu đóng 100% chọn Cancle   |Không được phép đăng ký môn học trùng với môn niên chế (môn bắt buộc học)|Vui lòng đợi trong khi môn trước được kiểm tra|Ngoài thời gian cho phép đăng ký môn học!|Môn học vừa chọn nằm ngoài chuyên ngành chuyên sâu chuyên ngành chính của sinh viên|Môn học vừa chọn nằm ngoài chuyên ngành chuyên sâu chuyên ngành 2 của sinh viên|Môn đăng ký học cải thiện cần có điểm tổng kết môn lớn hơn D|Môn đăng ký học cải thiện cần có điểm tổng kết môn lớn hơn D và số chênh lệch học kỳ tính đến học kỳ hiện tại là |Môn học vừa chọn bị trùng tổng số tiết với TKB cũ là | tổng số tiết.Vẫn tiếp tục chọn|Môn vừa đăng ký bị trùng lịch thi với môn đã chọn trước đó, không thể chọn!|Môn vừa chọn trùng lịch thi với môn chọn trước đó, vẫn tiếp tục lưu ?|Môn vừa đăng ký bị trùng lịch thi với môn đã chọn trước đó, vượt quá số cho phép trùng tối đa |Đã qua thời gian đăng ký, không thể xóa|(Không có môn học được mở)|Không đủ số tín chỉ đăng ký tích lũy (hoặc đạt tích lũy) để đăng ký môn |Không thể thay đổi kqdk vượt quá phạm vi số tín chỉ max quy định trong đợt đăng ký 1|0');</script>
+    <%--    <script language="JavaScript">LoadDSKhoaLop_load('Lọc >>|Lọc >>|Lưu Đăng Ký|Xóa|Lưu|Vượt số tín chỉ tối đa cho phép!|Môn học vừa chọn bị trùng thời khóa biểu. Vẫn tiếp tục chọn?|Môn học vừa chọn bị trùng TKB, không được phép chọn!|Không có môn học nào được chọn để xóa!|Xác nhận xóa các môn đã chọn?|Xác nhận xóa tất cả các môn đã đăng ký?|Vui lòng nhập vào điều kiện cần lọc!|Server đang bận, vui lòng đợi chọn lưu lại lần nữa!|100|Bạn có muốn đóng 100% học phí cho lần đầu, nếu đóng 100% chọn Cancle   |Không được phép đăng ký môn học trùng với môn niên chế (môn bắt buộc học)|Vui lòng đợi trong khi môn trước được kiểm tra|Ngoài thời gian cho phép đăng ký môn học!|Môn học vừa chọn nằm ngoài chuyên ngành chuyên sâu chuyên ngành chính của sinh viên|Môn học vừa chọn nằm ngoài chuyên ngành chuyên sâu chuyên ngành 2 của sinh viên|Môn đăng ký học cải thiện cần có điểm tổng kết môn lớn hơn D|Môn đăng ký học cải thiện cần có điểm tổng kết môn lớn hơn D và số chênh lệch học kỳ tính đến học kỳ hiện tại là |Môn học vừa chọn bị trùng tổng số tiết với TKB cũ là | tổng số tiết.Vẫn tiếp tục chọn|Môn vừa đăng ký bị trùng lịch thi với môn đã chọn trước đó, không thể chọn!|Môn vừa chọn trùng lịch thi với môn chọn trước đó, vẫn tiếp tục lưu ?|Môn vừa đăng ký bị trùng lịch thi với môn đã chọn trước đó, vượt quá số cho phép trùng tối đa |Đã qua thời gian đăng ký, không thể xóa|(Không có môn học được mở)|Không đủ số tín chỉ đăng ký tích lũy (hoặc đạt tích lũy) để đăng ký môn |Không thể thay đổi kqdk vượt quá phạm vi số tín chỉ max quy định trong đợt đăng ký 1|0');</script>--%>
     <script type="text/javascript">
         //<![CDATA[
         Sys.Application.initialize();
@@ -2025,5 +2024,6 @@
 </form>
 
 
-<img src="./source-dkmh/arrowdown.gif" id="arrowhead"></body>
+<%--<img src="./source-dkmh/arrowdown.gif" id="arrowhead">--%>
+</body>
 </html>
