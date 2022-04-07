@@ -68,15 +68,21 @@ function getLsHocphan(input) {
                     if(data.data[i].dsLichHoc.filter(x => x.kipHoc.maKipHoc==data.data[i].dsLichHoc[0].kipHoc.maKipHoc).length < data.data[i].dsLichHoc.length){
                         let tuanArray =getLsTuan(data.data[i].dsLichHoc)
                         console.log(tuanArray)
-                        // if(tuanArray[tuanArray.length-1])
-                        // table = createTable(input, data.data[i].monHocKiHoc.monHoc.tenMonHoc,
-                        //     i+1,data.data[i].monHocKiHoc.monHoc.soTc,
-                        //     data.data[i].monHocKiHoc.monHoc.soTc, data.data[i].maLopHocPhan,
-                        //     data.data[i].siSoToiDa,data.data[i].siSoToiDa - data.data[i].siSoThucTe,
-                        //
-                        //     data.data[i].dsLichHoc[0].ngayHoc.moTa, data.data[i].dsLichHoc[0].kipHoc.tenKipHoc,
-                        //     2, data.data[i].dsLichHoc[0].phongHoc.tenPhongHoc, data.data[i].dsLichHoc[0].giangvien,
-                        //     tuanArray,data.data[i].maLopHocPhan,tuanArray[tuanArray.length-1])
+                        let arr01 = []; let arr02 = []; let arr03 = []; let arr04 = []; let arr05 = [];
+                        // i * 2 - 1 = index data
+                        for(let j = 1;j<= tuanArray.length/2;++j){
+                            arr01.push(data.data[i].dsLichHoc[j*2-1].ngayHoc.moTa);
+                            arr02.push(data.data[i].dsLichHoc[j*2-1].kipHoc.tenKipHoc);
+                            arr03.push(data.data[i].dsLichHoc[j*2-1].phongHoc.tenPhongHoc);
+                            arr04.push(data.data[i].dsLichHoc[j*2-1].giangvien);
+                            arr05.push(tuanArray[j*2-2])
+                        }
+                        table = createTable(input, data.data[i].monHocKiHoc.monHoc.tenMonHoc,
+                            i+1,data.data[i].monHocKiHoc.monHoc.soTc,
+                            data.data[i].monHocKiHoc.monHoc.soTc, data.data[i].maLopHocPhan,
+                            data.data[i].siSoToiDa,data.data[i].siSoToiDa - data.data[i].siSoThucTe,
+                            arr01, arr02, 2, arr03, arr04,
+                            arr05,data.data[i].maLopHocPhan,tuanArray.length/2)
                     }
                     else{
                         let tuan = getLsTuan(data.data[i].dsLichHoc)
@@ -113,23 +119,18 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
     content += "<td width='77px' align='center'>" + MaLop + "</td>"
     content += "<td width='28px' align='center'>" + SiSo + "</td>"
     content += "<td width='28px' align='center'>" + CL + "</td>"
-    if(type == 2){
-        for(let i = 0;i<type;++i){
-
-        }
-        return content
-    }
-    else if(type == 3){
-        for(let i = 0;i<type;++i){
-
-        }
-        return content
-    }
-    else if(type == 4){
-        for(let i = 0;i<type;++i){
-
-        }
-        return content
+    if(type != 1){
+        console.log(type)
+        content +=  "<td width='20px' align='center'>" + initData(type, null) +"</td>";
+        content += "<td width='35px' align='center'>" + initData(type, Thu) + "</td>"
+        content += "<td width='50px' align='center'>" + initData(type, TenKipHoc) + "</td>"
+        content += "<td width='30px' align='center'>" + initData(type,ST) + "</td>"
+        content += "<td width='60px' align='center'>" + initData(type,Phong) + "</td>"
+        content += "<td width='70px' align='center'>" + initData(type,GV) +"</td>"
+        content += "<td style='font-size: 12px;font-family: Courier' align='left'>" +initData(type,Tuan)+ "</td>"
+        //het
+        content += "</tr></tbody></table>"
+        return content;
     }
     content += "<td width='20px' align='center'>" + "</td>"
     content += "<td width='35px' align='center'>" + Thu + "</td>"
@@ -145,14 +146,14 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
 
 function getLsTuan(lsTuan) {
     let tuanDauTien = 26;
-    let tuanCuoiCung = parseInt((lsTuan[lsTuan.length-1].tuanHoc.maTuanHoc).substring(7));
-    let lsTuanHoc = [];
+    let tuanCuoiCung = 42;
+
     let lastIndex = [];
     let index = 0;
     for(let i = lsTuan.length-1;i>=0;i--){
         if(lsTuan[index].kipHoc.maKipHoc == lsTuan[i].kipHoc.maKipHoc &&
             lsTuan[index].ngayHoc.moTa == lsTuan[i].ngayHoc.moTa){
-            console.log(lsTuan[i].ngayHoc.moTa + " ngay thu may?")
+            // console.log(lsTuan[i].ngayHoc.moTa + " ngay thu may?")
             lastIndex.push(i);
             if(i == lsTuan.length -1)
                 break;
@@ -161,8 +162,10 @@ function getLsTuan(lsTuan) {
         }
 
     }
-    console.log(lastIndex + "  ==============vi tri cua nhung tuan trong lop")
+    // console.log(lastIndex + "  ==============vi tri cua nhung tuan trong lop")
+    let lsTuanHoc = [];
     if(lastIndex.length == 1){
+        lsTuanHoc = [];
         for(let i = 0;i<lsTuan.length;i++){
             lsTuanHoc.push(parseInt((lsTuan[i].tuanHoc.maTuanHoc).substring(7)))
         }
@@ -176,19 +179,17 @@ function getLsTuan(lsTuan) {
                 result += '-';
         }
         resultArr.push(result)
+        resultArr.push(lastIndex[0])
         return resultArr
     }
     else{
         let i = 0
         let resultArr = [];
-        debugger
         for(let count = 0;count<lastIndex.length;count++){
+            lsTuanHoc = [];
             let result ='';
-
-            for(i;i<=lastIndex[count];++i){
+            for(i;i<lastIndex[count]+1;++i){
                 lsTuanHoc.push(parseInt((lsTuan[i].tuanHoc.maTuanHoc).substring(7)))
-                console.log(parseInt((lsTuan[i].tuanHoc.maTuanHoc).substring(7)))
-                debugger
             }
             for(i = tuanDauTien;i<=tuanCuoiCung;i++){
                 if(lsTuanHoc.indexOf(i)!=-1 && lsTuanHoc.indexOf(i) <= lastIndex[count]){
@@ -198,9 +199,30 @@ function getLsTuan(lsTuan) {
                     result += '-';
             }
             resultArr.push(result)
+            resultArr.push(lastIndex[count])
             i=lastIndex[count] + 1;
         }
-        resultArr.push(lastIndex.length)
         return resultArr
     }
+}
+
+function initData(type, arr) {
+    let content = '';
+    if (arr == 2){
+        for(let i = 0;i<type;++i){
+            content += "<div class='top-fline'>" + 2 + "</div>"
+            if(type - 1 != i) content += "<div class='fline'>" + " " + "</div>";
+        }
+    }
+    else if(arr != null)
+        for(let i = 0;i<type;++i){
+            content += "<div class='top-fline'>" + arr[i] + "</div>"
+            if(type - 1 != i) content += "<div class='fline'>" + " " + "</div>";
+        }
+    else
+        for(let i = 0;i<type;++i){
+            content += "<div class='top-fline'>" + "</div>"
+            if(type - 1 != i) content += "<div class='fline'>" + " " + "</div>";
+        }
+    return content;
 }
