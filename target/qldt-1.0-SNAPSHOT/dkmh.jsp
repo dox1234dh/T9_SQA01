@@ -26,7 +26,7 @@
     <script src="./source-dkmh/balloontip.js" type="text/javascript"></script>
     <link href="./source-dkmh/balloontip.css" rel="stylesheet" type="text/css">
     <title>
-        Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
+        Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Trung-BCVTVTHN
     </title>
     <script type="text/javascript" language="javascript">
 
@@ -1066,11 +1066,9 @@
                             function btnLocTheoTenMh_click() {
                                 var monHocLoc = document.getElementById("txtMaMH1");
                                 if (monHocLoc.value == "") {
-                                    alert(nhapDKLoc);
-                                    return false;
+                                    getLsMonhoc("%20")
                                 } else {
-
-                                    document.body.style.cursor = 'wait';
+                                    // document.body.style.cursor = 'wait';
                                     getLsMonhoc(monHocLoc.value)
                                 }
                             }
@@ -1229,7 +1227,7 @@
                                 var selectmenu = document.getElementById("selectMonHoc");
                                 var chosenOption = selectmenu.options[selectmenu.selectedIndex];
                                 if (chosenOption.value) {
-                                    document.body.style.cursor = 'wait';
+                                    // document.body.style.cursor = 'wait';
                                     EduSoft.Web.UC.DangKyMonHoc.LocTheoMonHoc(chosenOption.value, ShowTatCaTDK_callback);
                                 }
                             }
@@ -1355,7 +1353,7 @@
                             function txtMaMH1_keypress(e) {
                                 var keyCode = (window.Event) ? e.which : e.keyCode;
                                 if (keyCode == 13) {
-                                    document.body.style.cursor = 'wait';
+                                    // document.body.style.cursor = 'wait';
                                     //document.getElementById("btnLocTheoMaMH1").click();
                                     btnLocTheoMaMH1_click();
                                 }
@@ -1495,7 +1493,8 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" id="txtMaMH1"
-                                                                   >
+                                                                   onchange="this.value = this.value.trim()"
+                                                            maxlength="255">
                                                             <input type="button" value="Lọc &gt;&gt;"
                                                                    id="btnLocTheoMaMH1"
                                                                    onclick="btnLocTheoTenMh_click()">
@@ -1567,8 +1566,8 @@
                             </div>
                             <div id="ctl00_ContentPlaceHolder1_ctl00_pnlThongbao">
 
-                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblThongBaoNgoaiTGDK" class="Label"
-                                      style="color:Red;font-weight:bold;">Thông báo: ngoài thời gian đăng ký. Sinh viên không được chọn hoặc hiệu chỉnh môn học.</span>
+<%--                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblThongBaoNgoaiTGDK" class="Label"--%>
+<%--                                      style="color:Red;font-weight:bold;">Thông báo: ngoài thời gian đăng ký. Sinh viên không được chọn hoặc hiệu chỉnh môn học.</span>--%>
 
                             </div>
                             <table id="pnlDSMonhocDK">
@@ -1967,7 +1966,7 @@
                                 <tr>
                                     <td align="left" class="style5">
                                         <img src="./source-dkmh/icon_11c.gif" alt="">
-                                        <span class="LogoFooter"><span id="ctl00_Footer1_lblCompany" class="Label">Copyright ©2009 Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc. Quản lý bởi </span></span>
+                                        <span class="LogoFooter"><span id="ctl00_Footer1_lblCompany" class="Label">Copyright ©2009 Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Trung. Quản lý bởi </span></span>
                                     </td>
 
                                     <td valign="top" align="left" class="style4">
@@ -1983,8 +1982,8 @@
                                 <tr>
                                     <td class="style5">
                                         <img src="./source-dkmh/icon_11c.gif" alt="">
-                                        <a href="https://aqtech.vn/" target="_blank"><span
-                                                id="ctl00_Footer1_lblCopyRight" class="Label">Thiết kế bởi cty Phần mềm Anh Quân</span></a>
+                                        <a href="https://google.com" target="_blank"><span
+                                                id="ctl00_Footer1_lblCopyRight" class="Label">Thiết kế bởi cty Trần Văn Đô</span></a>
 
 
                                     </td>

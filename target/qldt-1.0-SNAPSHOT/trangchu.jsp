@@ -35,7 +35,7 @@
     <link href="./source-home/balloontip.css"
           rel="stylesheet" type="text/css">
     <title>
-        Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
+        Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Trung-BCVTVTHN
     </title>
     <script type="text/javascript" language="javascript">
 
@@ -1402,7 +1402,7 @@ ký học kỳ phụ 2020-2021 (hè 2021)</span>... (<span class="NgayTitle">15/
                                     <td align="left" class="style5">
                                         <img src="./source-home/icon_11c.gif"
                                              alt="">
-                                        <span class="LogoFooter"><span id="ctl00_Footer1_lblCompany" class="Label">Copyright ©2009 Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc. Quản lý bởi </span></span>
+                                        <span class="LogoFooter"><span id="ctl00_Footer1_lblCompany" class="Label">Copyright ©2009 Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Trung. Quản lý bởi </span></span>
                                     </td>
 
                                     <td valign="top" align="left" class="style4">
@@ -1420,8 +1420,8 @@ ký học kỳ phụ 2020-2021 (hè 2021)</span>... (<span class="NgayTitle">15/
                                     <td class="style5">
                                         <img src="./source-home/icon_11c.gif"
                                              alt="">
-                                        <a href="https://aqtech.vn/" target="_blank"><span
-                                                id="ctl00_Footer1_lblCopyRight" class="Label">Thiết kế bởi cty Phần mềm Anh Quân</span></a>
+                                        <a href="https://google.com" target="_blank"><span
+                                                id="ctl00_Footer1_lblCopyRight" class="Label">Thiết kế bởi cty Trần Văn Đô</span></a>
 
 
                                     </td>
