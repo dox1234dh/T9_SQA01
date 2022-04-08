@@ -1,3 +1,11 @@
+let dataGlobal;
+let arrSave = [];
+class listMonHoc {
+    // constructor(masv, ten) {
+    //     this.masv = masv;
+    //     this.ten = ten;
+    // }
+}
 $(document).ready(function () {
     // debugger;
     getLsMonhoc('%20');
@@ -5,9 +13,30 @@ $(document).ready(function () {
         let valueSelected = this.value;
         getLsHocphan(valueSelected);
     });
+    $('#divKQ table').remove();
+    getDK();
+
 })
-let dataGlobal;
-let arrSave = [];
+function getDK() {
+    let path = 'http://localhost:8081/dangkytinchi/luudangky/' + localStorage.getItem("masv")
+    $.ajax({
+        type: 'GET',
+        url: path,
+        crossDomain: true,
+        processData: true,
+        success: function (data) {
+            if (data.error) {
+                alert(data.error);
+                location.reload();
+            } else {
+                console.log(data.data);
+                //xu ly thanh 1 list cac mon hoc
+                // let dataList = []
+                // dataList.push();
+            }
+        }
+    })
+}
 function getLsMonhoc(input) {
     // console.log(input)
     let path = 'http://localhost:8081/monhoc/timkiem/'
@@ -240,34 +269,66 @@ function checkedComboBox(maLopHocPhan) {
     let id = 'changeColor' + maLopHocPhan
     console.log(maLopHocPhan)
     console.log(dataGlobal)
-    debugger
+    // debugger
     if(document.getElementById(maLopHocPhan).checked){
         //them vo bang xem dang ky
         document.getElementById(id).style.backgroundColor = '#CCCCCC';
             let save = dataGlobal.filter(x => x.maLopHocPhan===maLopHocPhan);
-            if(save.length > 0){
-                //them data vao bang xem dang ky
-                arrSave.push(save[0]);
-            }
+            if(save.length > 0)  arrSave.push(save[0]);
     }
     else{
         //xoa khoi bang them dang ky
         document.getElementById(id).style.backgroundColor = '#FFFFFF';
             let save = dataGlobal.filter(x => x.maLopHocPhan === maLopHocPhan);
             if(save.length > 0){
-                //xoa data vao bang xem dang ky
-                // console.log(arrSave.indexOf(x => x.maLopHocPhan === save[0].maLopHocPhan,0))
                 for(let i = 0 ;i<arrSave.length;i++){
-                    if(arrSave[i].maLopHocPhan == save[0].maLopHocPhan){
-                        arrSave.splice(arrSave[i], 1);
+                    if(arrSave[i].maLopHocPhan === save[0].maLopHocPhan){
+                        arrSave.splice(i, 1);
                         break;
                     }
                 }
-                // console.log(arrSave.indexOf(save[0]))
-                // if (arrSave.indexOf(save[0]) !== -1) {
-                //     arrSave.splice(arrSave.indexOf(save[0]), 1); // 2nd parameter means remove one item only
-                // }
             }
     }
     console.log(arrSave)
+    createTableDK(arrSave);
+}
+
+function createTableDK(arrSave) {
+    let totalSTC = 0;
+    let totalSTCHP = 0;
+    let totalHP = 0;
+    let totalMienGiam = 0;
+    let totalPhaiDong = 0;
+    let content = "<table class='body-table' style='border-collapse: collapse; color:Navy;' rules='all' border='1' cellspacing='0' cellpadding='0'>"
+        + "<tbody>";
+    if(arrSave.length > 0 ){
+        for(let i =0;i<arrSave.length ;i++){
+            totalSTC += arrSave[i].monHocKiHoc.monHoc.soTc;
+            totalSTCHP += arrSave[i].monHocKiHoc.monHoc.soTc;
+            totalHP += (arrSave[i].monHocKiHoc.monHoc.soTc*480000);
+            totalPhaiDong += (arrSave[i].monHocKiHoc.monHoc.soTc*480000);
+            content += "<tr>"
+            content += "<td style='width: 30px;' valign='middle' align='center'>" + (i+1) + "</td>"
+            content += "<td style='width: 60px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.maMonHoc + "</td>"
+            content += "<td style='width: 180px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.tenMonHoc + "</td>"
+            content += "<td style='width: 50px;' valign='middle' align='center' >"+ arrSave[i].maLopHocPhan +"</td>"
+            content += "<td style='width: 30px;' valign='middle' align='center' ></td>"
+            content += "<td style='width: 35px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.soTc + "</td>"
+            content += "<td style='width: 35px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.soTc + "</td>"
+            content += "<td style='width: 80px;' valign='middle' align='center'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
+            content += "<td style='width: 80px;' valign='middle' align='center'></td>"
+            content += "<td style='width: 80px;' valign='middle' align='center'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
+            content += "<td valign='middle' align='left'> Chưa lưu vào cơ sở dữ liệu </td>"
+            content += "<td valign='middle' align='left' style='width: 50px;'>" +
+                "<input type='checkbox' id='chk_INT141601    ' name='chk_xoa' value='INT141601' onclick='CheckToDelete_CheckedChanged(this)'>" +
+                "</td>"
+        }
+        // content +=
+        content += "</tbody></table>"
+    }
+    else{
+        content += "</tbody></table>"
+    }
+    $('#divKQ table').remove();
+    $('#divKQ').append(content);
 }

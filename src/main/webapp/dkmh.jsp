@@ -1651,9 +1651,9 @@
                                                                                 runat="server">Mã MH </asp:label></td>
                                             <td style="width: 180px;"><asp:label id="lblG2TMH"
                                                                                  runat="server">Tên môn học </asp:label></td>
-                                            <td style="width: 35px;"><asp:label id="lblG2NMH"
-                                                                                runat="server">NMH </asp:label></td>
-                                            <td style="width: 45px;"><asp:label id="lblG2TTH"
+                                            <td style="width: 50px;"><asp:label id="lblG2NMH"
+                                                                                runat="server">Mã lớp</asp:label></td>
+                                            <td style="width: 30px;"><asp:label id="lblG2TTH"
                                                                                 runat="server">TTH </asp:label></td>
                                             <td style="width: 35px;"><asp:label id="lblG2STC"
                                                                                 runat="server">STC </asp:label></td>
