@@ -451,25 +451,25 @@
 
                                     <div id="ctl00_menu_panLiLich" class="out-menu">
 
-                                        <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">
-                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>
-                                        </div>
-                                        <div class="right"></div>
+<%--                                        <div class="left"></div>--%>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">--%>
+<%--                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="right"></div>--%>
 
                                     </div>
 
 
                                     <div id="ctl00_menu_pnlHDSD" class="out-menu">
 
-                                        <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">
-                                                <span id="ctl00_menu_lblHuongDanDangKy"
-                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>
-                                        </div>
-                                        <div class="right"></div>
+<%--                                        <div class="left"></div>--%>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">--%>
+<%--                                                <span id="ctl00_menu_lblHuongDanDangKy"--%>
+<%--                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="right"></div>--%>
 
                                     </div>
 
@@ -864,8 +864,8 @@
                                             </select>
 
 
-                                            <input type="button" id="InTKB" onclick="InTKBClick()" value="In TKB"
-                                                   style="font-size: 11px; height: 20px;">&nbsp;
+<%--                                            <input type="button" id="InTKB" onclick="InTKBClick()" value="In TKB"--%>
+<%--                                                   style="font-size: 11px; height: 20px;">&nbsp;--%>
 
 
                                         </td>

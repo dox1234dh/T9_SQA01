@@ -6,8 +6,10 @@ $(document).ready(function () {
         getLsHocphan(valueSelected);
     });
 })
+let dataGlobal;
+let arrSave = [];
 function getLsMonhoc(input) {
-    console.log(input)
+    // console.log(input)
     let path = 'http://localhost:8081/monhoc/timkiem/'
     path = path + input;
     $('#selectMonHoc')
@@ -27,7 +29,7 @@ function getLsMonhoc(input) {
                 alert(data.error);
                 location.reload();
             } else {
-                console.log(data.data)
+                // console.log(data.data)
                 if(data.data.length > 0)
                     for(let i=0;i<data.data.length; i++){
                         $('select[id="selectMonHoc"]')
@@ -41,7 +43,7 @@ function getLsMonhoc(input) {
     })
 }
 function getLsHocphan(input) {
-    console.log(input)
+    // console.log(input)
     let path = 'http://localhost:8081/dangkytinchi/lophocphan/'
     path = path + input;
     $('#selectMonHoc')
@@ -63,18 +65,21 @@ function getLsHocphan(input) {
             } else {
                 console.log(data.data)
                 let table;
+                dataGlobal = data.data
+                // arrLopHocPhan = [];
                 // debugger;
                 for(let i=0;i < data.data.length;i++){
+                    // arrLopHocPhan.push(data.data[i].maLopHocPhan);
                     if(data.data[i].dsLichHoc.filter(x => x.kipHoc.maKipHoc==data.data[i].dsLichHoc[0].kipHoc.maKipHoc).length < data.data[i].dsLichHoc.length){
                         let tuanArray =getLsTuan(data.data[i].dsLichHoc)
-                        console.log(tuanArray)
+                        // console.log(tuanArray)
                         let arr01 = []; let arr02 = []; let arr03 = []; let arr04 = []; let arr05 = [];
                         // i * 2 - 1 = index data
                         for(let j = 1;j<= tuanArray.length/2;++j){
-                            arr01.push(data.data[i].dsLichHoc[j*2-1].ngayHoc.moTa);
-                            arr02.push(data.data[i].dsLichHoc[j*2-1].kipHoc.tenKipHoc);
-                            arr03.push(data.data[i].dsLichHoc[j*2-1].phongHoc.tenPhongHoc);
-                            arr04.push(data.data[i].dsLichHoc[j*2-1].giangvien);
+                            arr01.push(data.data[i].dsLichHoc[tuanArray[j*2-1]].ngayHoc.moTa);
+                            arr02.push(data.data[i].dsLichHoc[tuanArray[j*2-1]].kipHoc.tenKipHoc);
+                            arr03.push(data.data[i].dsLichHoc[tuanArray[j*2-1]].phongHoc.tenPhongHoc);
+                            arr04.push(data.data[i].dsLichHoc[tuanArray[j*2-1]].giangvien);
                             arr05.push(tuanArray[j*2-2])
                         }
                         table = createTable(input, data.data[i].monHocKiHoc.monHoc.tenMonHoc,
@@ -104,11 +109,16 @@ function getLsHocphan(input) {
 
 function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipHoc, ST, Phong, GV, Tuan, maLopHocPhan,type) {
     let content = "<table class='body-table' style='border-collapse: collapse;' rules='all' border='1' cellspacing='0' cellpadding='0'>"
-    + "<tbody>" + "<tr id='changeColor'>"
+    + "<tbody>";
     //dien thong tin cac truong
-    content += "<td width='25px' align='center'>" +
-    "<input type='checkbox' id ="+ maLopHocPhan + ">"
-    + "</td>"
+    if(arrSave.filter(x => x.maLopHocPhan == MaLop).length > 0)
+        content += "<tr id='changeColor" + maLopHocPhan + "' style='background-color: #CCCCCC'>" + "<td width='25px' align='center'>" +
+            "<input type='checkbox' checked onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
+            + "</td>"
+    else
+        content += "<tr id='changeColor" + maLopHocPhan + "'>" + "<td width='25px' align='center'>" +
+        "<input type='checkbox' onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
+        + "</td>"
 
     content += "<td width='60px' align='center'>" + MaMH + "</td>"
     content += "<td width='150x' align='left'>" + TenMH + "</td>"
@@ -120,7 +130,7 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
     content += "<td width='28px' align='center'>" + SiSo + "</td>"
     content += "<td width='28px' align='center'>" + CL + "</td>"
     if(type != 1){
-        console.log(type)
+        // console.log(type)
         content +=  "<td width='20px' align='center'>" + initData(type, null) +"</td>";
         content += "<td width='35px' align='center'>" + initData(type, Thu) + "</td>"
         content += "<td width='50px' align='center'>" + initData(type, TenKipHoc) + "</td>"
@@ -143,7 +153,6 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
     content += "</tr></tbody></table>"
     return content
 }
-
 function getLsTuan(lsTuan) {
     let tuanDauTien = 26;
     let tuanCuoiCung = 42;
@@ -225,4 +234,40 @@ function initData(type, arr) {
             if(type - 1 != i) content += "<div class='fline'>" + " " + "</div>";
         }
     return content;
+}
+
+function checkedComboBox(maLopHocPhan) {
+    let id = 'changeColor' + maLopHocPhan
+    console.log(maLopHocPhan)
+    console.log(dataGlobal)
+    debugger
+    if(document.getElementById(maLopHocPhan).checked){
+        //them vo bang xem dang ky
+        document.getElementById(id).style.backgroundColor = '#CCCCCC';
+            let save = dataGlobal.filter(x => x.maLopHocPhan===maLopHocPhan);
+            if(save.length > 0){
+                //them data vao bang xem dang ky
+                arrSave.push(save[0]);
+            }
+    }
+    else{
+        //xoa khoi bang them dang ky
+        document.getElementById(id).style.backgroundColor = '#FFFFFF';
+            let save = dataGlobal.filter(x => x.maLopHocPhan === maLopHocPhan);
+            if(save.length > 0){
+                //xoa data vao bang xem dang ky
+                // console.log(arrSave.indexOf(x => x.maLopHocPhan === save[0].maLopHocPhan,0))
+                for(let i = 0 ;i<arrSave.length;i++){
+                    if(arrSave[i].maLopHocPhan == save[0].maLopHocPhan){
+                        arrSave.splice(arrSave[i], 1);
+                        break;
+                    }
+                }
+                // console.log(arrSave.indexOf(save[0]))
+                // if (arrSave.indexOf(save[0]) !== -1) {
+                //     arrSave.splice(arrSave.indexOf(save[0]), 1); // 2nd parameter means remove one item only
+                // }
+            }
+    }
+    console.log(arrSave)
 }

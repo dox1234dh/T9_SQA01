@@ -318,17 +318,17 @@
                                                  alt="Vietnamese" onclick="changeLanguage_click(&#39;_vi&#39;)"
                                                  id="imgVi" title="Vietnamese">
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;background-color: black;" onload="setName()"></span>&nbsp;
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;" onload="setName()"></span>&nbsp;
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
                                                href="http://localhost:8080/ttcn.jsp"
-                                               style="background-color: black;color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
+                                               style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
                                                 đổi mật khẩu</a>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
                                                href="http://localhost:8080/index.jsp"
                                                onclick="clearSession()"
-                                               style="background-color: black;color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
+                                               style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
 <%--                                            &nbsp;<select id="selectFont"--%>
 <%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
 <%--                                                          onchange="selectFont_change()">--%>
@@ -412,7 +412,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThi"
                                                       class="Label">XEM LỊCH THI</span></a>
                                         </div>
@@ -424,7 +424,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthilai">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThiLai"
                                                       class="Label">XEM LỊCH THI LẠI</span></a>
                                         </div>
@@ -437,7 +437,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemhocphi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemHocPhi" class="Label">XEM HỌC PHÍ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -449,7 +449,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemdiemthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemDiem" class="Label">XEM ĐIỂM</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -461,7 +461,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ctdtkhoisv">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemCTDTKhoiSV" class="Label">XEM CTĐT</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -472,7 +472,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemmontienquyet">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemMonTQ" class="Label">XEM MÔN TQ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -495,7 +495,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ykiensinhvien">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblykiensinhvien"
                                                       class="Label">GÓP Ý KIẾN</span></a>
                                         </div>
@@ -507,10 +507,10 @@
                                     <div id="ctl00_menu_panLiLich" class="out-menu">
 
                                         <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">
-                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>
-                                        </div>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">--%>
+<%--                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>--%>
+<%--                                        </div>--%>
                                         <div class="right"></div>
 
                                     </div>
@@ -520,9 +520,9 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">
-                                                <span id="ctl00_menu_lblHuongDanDangKy"
-                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>
+<%--                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">--%>
+<%--                                                <span id="ctl00_menu_lblHuongDanDangKy"--%>
+<%--                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>--%>
                                         </div>
                                         <div class="right"></div>
 

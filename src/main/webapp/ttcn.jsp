@@ -451,25 +451,25 @@
 
                                     <div id="ctl00_menu_panLiLich" class="out-menu">
 
-                                        <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">
-                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>
-                                        </div>
-                                        <div class="right"></div>
+<%--                                        <div class="left"></div>--%>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=sualilich">--%>
+<%--                                                <span id="ctl00_menu_lblSuaLiLich" class="Label">SỬA LÝ LỊCH</span></a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="right"></div>--%>
 
                                     </div>
 
 
                                     <div id="ctl00_menu_pnlHDSD" class="out-menu">
 
-                                        <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">
-                                                <span id="ctl00_menu_lblHuongDanDangKy"
-                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>
-                                        </div>
-                                        <div class="right"></div>
+<%--                                        <div class="left"></div>--%>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">--%>
+<%--                                                <span id="ctl00_menu_lblHuongDanDangKy"--%>
+<%--                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="right"></div>--%>
 
                                     </div>
 
@@ -587,112 +587,93 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="right" class="style1">
+                                            <td align="left" class="style1">
                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblTitleTaiKhoan"
                                                       class="Label">Tài khoản:</span>
-                                            </td>
-                                            <td align="left">&nbsp;<span
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_lblTaiKhoan" class="Label"
-                                                    style="font-weight:bold;font-style:italic;">B18DCCN158</span>
-
+                                                <span
+                                                        id="ctl00_ContentPlaceHolder1_ctl00_lblTaiKhoan" class="Label"
+                                                        style="font-weight:bold;font-style:italic;">B18DCCN158</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="right" class="style1">
+                                            <td align="left" class="style1">
                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_labelHoTen" class="Label">Họ tên:</span>
-                                            </td>
-                                            <td align="left">&nbsp;<span id="ctl00_ContentPlaceHolder1_ctl00_lblHoTen"
-                                                                         class="Label"
-                                                                         style="font-weight:bold;font-style:italic;">Trần Văn Đô</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" class="style1">
-                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblMatKhau" class="Label">Mật khẩu:</span>
-                                            </td>
-                                            <td align="left">&nbsp;<a id="ctl00_ContentPlaceHolder1_ctl00_btnTDMKhau"
-                                                                      href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$btnTDMKhau&#39;,&#39;&#39;)"
-                                                                      style="color:Blue;">Thay đổi mật khẩu</a>
+                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblHoTen"
+                                                      class="Label"
+                                                      style="font-weight:bold;font-style:italic;">Trần Văn Đô</span>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="style1" bgcolor="#CCCCFF" align="left">&nbsp;&nbsp;<b><span
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_labelPhone" class="Label">Điện thoại</span></b>
-                                            </td>
-                                            <td align="right" bgcolor="#CCCCFF">
-                                                <a id="ctl00_ContentPlaceHolder1_ctl00_btnEditPhone"
-                                                   href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$btnEditPhone&#39;,&#39;&#39;)"
-                                                   style="color:Blue;">Sửa đổi</a>&nbsp;&nbsp;
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" class="style1">
-                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblPhone1" class="Label">Điện thoại (1):</span>
-                                            </td>
-                                            <td align="left">&nbsp;<input name="ctl00$ContentPlaceHolder1$ctl00$txtDT1"
-                                                                          type="text"
-                                                                          id="ctl00_ContentPlaceHolder1_ctl00_txtDT1"
-                                                                          disabled="disabled"
-                                                                          title="Nhập vào số điện thoại!"
-                                                                          class="TextBox"
-                                                                          style="font-weight:bold;font-style:italic;width:240px;">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" class="style1">
-                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblPhone2" class="Label">Điện thoại (2):</span>
-                                            </td>
-                                            <td align="left">&nbsp;<input name="ctl00$ContentPlaceHolder1$ctl00$txtDT2"
-                                                                          type="text"
-                                                                          id="ctl00_ContentPlaceHolder1_ctl00_txtDT2"
-                                                                          disabled="disabled"
-                                                                          title="Nhập số điện thoại thứ 2(Nếu có)!"
-                                                                          class="TextBox"
-                                                                          style="font-weight:bold;font-style:italic;width:240px;">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="style1" align="left" bgcolor="#CCCCFF">&nbsp;&nbsp;<b><span
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_lblTitleEmail" class="Label">Email</span></b>
-                                            </td>
-                                            <td align="right" bgcolor="#CCCCFF">
-                                                <a id="ctl00_ContentPlaceHolder1_ctl00_btnEditEmail"
-                                                   href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$btnEditEmail&#39;,&#39;&#39;)"
-                                                   style="color:Blue;">Sửa đổi</a>&nbsp;&nbsp;
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" class="style1">
-                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblEmail1" class="Label">Địa chỉ Email (1):</span>
-                                            </td>
-                                            <td align="left">&nbsp;<input
-                                                    name="ctl00$ContentPlaceHolder1$ctl00$txtEmail1" type="text"
-                                                    value="DoTV.B18CN158@stu.ptit.edu.vn"
-                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$txtEmail1\&#39;,\&#39;\&#39;)&#39;, 0)"
-                                                    onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_txtEmail1" disabled="disabled"
-                                                    title="Nhập địa chỉ Email!" class="TextBox"
-                                                    style="font-weight:bold;font-style:italic;width:240px;">
 
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right" class="style1">
-                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblEmail2" class="Label">Địa chỉ Email (2):</span>
-                                            </td>
-                                            <td align="left">&nbsp;<input
-                                                    name="ctl00$ContentPlaceHolder1$ctl00$txtEmail2" type="text"
-                                                    value="DoTV.B18CN158@stu.ptit.edu.vn"
-                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$txtEmail2\&#39;,\&#39;\&#39;)&#39;, 0)"
-                                                    onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_txtEmail2" disabled="disabled"
-                                                    title="Nhập địa chỉ Email thứ 2(Nếu có)!" class="TextBox"
-                                                    style="font-weight:bold;font-style:italic;width:240px;">
-
-
-                                            </td>
-                                        </tr>
+<%--                                        <tr>--%>
+<%--                                            <td class="style1" bgcolor="#CCCCFF" align="left">&nbsp;&nbsp;<b><span--%>
+<%--                                                    id="ctl00_ContentPlaceHolder1_ctl00_labelPhone" class="Label">Điện thoại</span></b>--%>
+<%--                                            </td>--%>
+<%--                                            <td align="right" bgcolor="#CCCCFF">--%>
+<%--&lt;%&ndash;                                                <a id="ctl00_ContentPlaceHolder1_ctl00_btnEditPhone"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$btnEditPhone&#39;,&#39;&#39;)"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   style="color:Blue;">Sửa đổi</a>&nbsp;&nbsp;&ndash;%&gt;--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td align="left" class="style1">--%>
+<%--                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblPhone1" class="Label">Điện thoại (1):</span>--%>
+<%--                                                <input name="ctl00$ContentPlaceHolder1$ctl00$txtDT1"--%>
+<%--                                                       type="text"--%>
+<%--                                                       id="ctl00_ContentPlaceHolder1_ctl00_txtDT1"--%>
+<%--                                                       disabled="disabled"--%>
+<%--                                                       title="Nhập vào số điện thoại!"--%>
+<%--                                                       class="TextBox"--%>
+<%--                                                       style="font-weight:bold;font-style:italic;width:240px;">--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td align="left" class="style1">--%>
+<%--                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblPhone2" class="Label">Điện thoại (2):</span>--%>
+<%--                                                <input name="ctl00$ContentPlaceHolder1$ctl00$txtDT2"--%>
+<%--                                                       type="text"--%>
+<%--                                                       id="ctl00_ContentPlaceHolder1_ctl00_txtDT2"--%>
+<%--                                                       disabled="disabled"--%>
+<%--                                                       title="Nhập số điện thoại thứ 2(Nếu có)!"--%>
+<%--                                                       class="TextBox"--%>
+<%--                                                       style="font-weight:bold;font-style:italic;width:240px;">--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td class="style1" align="left" bgcolor="#CCCCFF">&nbsp;&nbsp;<b><span--%>
+<%--                                                    id="ctl00_ContentPlaceHolder1_ctl00_lblTitleEmail" class="Label">Email</span></b>--%>
+<%--                                            </td>--%>
+<%--                                            <td align="right" bgcolor="#CCCCFF">--%>
+<%--&lt;%&ndash;                                                <a id="ctl00_ContentPlaceHolder1_ctl00_btnEditEmail"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$btnEditEmail&#39;,&#39;&#39;)"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   style="color:Blue;">Sửa đổi</a>&nbsp;&nbsp;&ndash;%&gt;--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td align="left" class="style1">--%>
+<%--                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblEmail1" class="Label">Địa chỉ Email (1):</span>--%>
+<%--                                                <input--%>
+<%--                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtEmail1" type="text"--%>
+<%--                                                        value="DoTV.B18CN158@stu.ptit.edu.vn"--%>
+<%--                                                        onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$txtEmail1\&#39;,\&#39;\&#39;)&#39;, 0)"--%>
+<%--                                                        onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"--%>
+<%--                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtEmail1" disabled="disabled"--%>
+<%--                                                        title="Nhập địa chỉ Email!" class="TextBox"--%>
+<%--                                                        style="font-weight:bold;font-style:italic;width:240px;">--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td align="left" class="style1">--%>
+<%--                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblEmail2" class="Label">Địa chỉ Email (2):</span>--%>
+<%--                                                <input--%>
+<%--                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtEmail2" type="text"--%>
+<%--                                                        value="DoTV.B18CN158@stu.ptit.edu.vn"--%>
+<%--                                                        onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$txtEmail2\&#39;,\&#39;\&#39;)&#39;, 0)"--%>
+<%--                                                        onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"--%>
+<%--                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtEmail2" disabled="disabled"--%>
+<%--                                                        title="Nhập địa chỉ Email thứ 2(Nếu có)!" class="TextBox"--%>
+<%--                                                        style="font-weight:bold;font-style:italic;width:240px;">--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
 
 
                                         <tr>
@@ -712,46 +693,39 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="right" class="style1">
+                                                            <td align="left" class="style1">
                                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblMKHTai"
                                                                       class="Label">Nhập mật khẩu hiện tại:</span>
-                                                            </td>
-                                                            <td align="left">&nbsp;<input
-                                                                    name="ctl00$ContentPlaceHolder1$ctl00$txtMKHienTai"
-                                                                    type="password"
-                                                                    id="ctl00_ContentPlaceHolder1_ctl00_txtMKHienTai"
-                                                                    title="Nhập mật khẩu hiện tại!" class="TextBox"
-                                                                    style="font-weight:bold;font-style:normal;width:240px;">
-
-
+                                                                <input
+                                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtMKHienTai"
+                                                                        type="password"
+                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtMKHienTai"
+                                                                        title="Nhập mật khẩu hiện tại!" class="TextBox"
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="right" class="style1">
+                                                            <td align="left" class="style1">
                                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblMKMoi"
                                                                       class="Label">Nhập mật khẩu mới:</span>
-                                                            </td>
-                                                            <td align="left">&nbsp;<input
-                                                                    name="ctl00$ContentPlaceHolder1$ctl00$txtMKMoi"
-                                                                    type="password"
-                                                                    id="ctl00_ContentPlaceHolder1_ctl00_txtMKMoi"
-                                                                    title="Nhập vào mật khẩu mới!" class="TextBox"
-                                                                    style="font-weight:bold;font-style:normal;width:240px;">
+                                                                <input
+                                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtMKMoi"
+                                                                        type="password"
+                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtMKMoi"
+                                                                        title="Nhập vào mật khẩu mới!" class="TextBox"
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="right" class="style1">
+                                                            <td align="left" class="style1">
                                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblXacNhanMK"
                                                                       class="Label">Xác nhận mật khẩu mới:</span>
-                                                            </td>
-                                                            <td align="left">&nbsp;<input
-                                                                    name="ctl00$ContentPlaceHolder1$ctl00$txtXacNhanMK"
-                                                                    type="password"
-                                                                    id="ctl00_ContentPlaceHolder1_ctl00_txtXacNhanMK"
-                                                                    title="Xác nhận lại mật khẩu mới!" class="TextBox"
-                                                                    style="font-weight:bold;font-style:normal;width:240px;">
-
-
+                                                                <input
+                                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtXacNhanMK"
+                                                                        type="password"
+                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtXacNhanMK"
+                                                                        title="Xác nhận lại mật khẩu mới!" class="TextBox"
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
                                                         </tr>
                                                         <tr>

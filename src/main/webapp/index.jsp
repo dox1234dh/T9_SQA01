@@ -209,21 +209,21 @@
                                                   style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn </span>&nbsp;
 
 
-                                            <a id="ctl00_Header1_Logout1_lbtnLogOut"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
-                                               style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Đăng
-                                                Nhập</a>
-                                            &nbsp;<select id="selectFont"
-                                                          style="font-size: 11px; width: 100px; color: #000080;"
-                                                          onchange="selectFont_change()">
-                                            <option value="uni">-------Font-------</option>
-                                            <option value="uni" selected="">Font Unicode</option>
-                                            <option value="abc">Font ABC</option>
-                                            <option value="vni">Font Vni</option>
-                                            <option value="not">Text không
-                                                dấu
-                                            </option>
-                                        </select>
+<%--                                            <a id="ctl00_Header1_Logout1_lbtnLogOut"--%>
+<%--                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"--%>
+<%--                                               style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Đăng--%>
+<%--                                                Nhập</a>--%>
+<%--                                            &nbsp;<select id="selectFont"--%>
+<%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
+<%--                                                          onchange="selectFont_change()">--%>
+<%--                                            <option value="uni">-------Font-------</option>--%>
+<%--                                            <option value="uni" selected="">Font Unicode</option>--%>
+<%--                                            <option value="abc">Font ABC</option>--%>
+<%--                                            <option value="vni">Font Vni</option>--%>
+<%--                                            <option value="not">Text không--%>
+<%--                                                dấu--%>
+<%--                                            </option>--%>
+<%--                                        </select>--%>
                                         </div>
 
                                     </td>
@@ -259,7 +259,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="localhost:8080">
+                                            <a href="/index.jsp">
                                                 <span id="ctl00_menu_lblTrangChu" class="Label">TRANG CHỦ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -270,11 +270,11 @@
                                     <div id="ctl00_menu_pnlHDSD" class="out-menu">
 
                                         <div class="left"></div>
-                                        <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">
-                                                <span id="ctl00_menu_lblHuongDanDangKy"
-                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>
-                                        </div>
+<%--                                        <div class="center" style="white-space: nowrap">--%>
+<%--                                            <a href="https://qldt.ptit.edu.vn/HDDKMH.htm">--%>
+<%--                                                <span id="ctl00_menu_lblHuongDanDangKy"--%>
+<%--                                                      class="Label">HƯỚNG DẪN ĐKMH</span></a>--%>
+<%--                                        </div>--%>
                                         <div class="right"></div>
 
                                     </div>
@@ -330,12 +330,12 @@
                                                 <td>
                                                     <div class="icons"></div>
                                                 </td>
-                                                <td>
-                                                    <a id="ctl00_ContentPlaceHolder1_ctl00_lnkBtnQuenMK"
-                                                       href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$lnkBtnQuenMK&#39;,&#39;&#39;)"
-                                                       style="color:Blue;font-family:Tahoma;font-size:9pt;">Quên mật
-                                                        khẩu!</a>
-                                                </td>
+<%--                                                <td>--%>
+<%--                                                    <a id="ctl00_ContentPlaceHolder1_ctl00_lnkBtnQuenMK"--%>
+<%--                                                       href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$ctl00$lnkBtnQuenMK&#39;,&#39;&#39;)"--%>
+<%--                                                       style="color:Blue;font-family:Tahoma;font-size:9pt;">Quên mật--%>
+<%--                                                        khẩu!</a>--%>
+<%--                                                </td>--%>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -353,7 +353,9 @@
                                                     <input name="ctl00$ContentPlaceHolder1$ctl00$txtTaiKhoa" type="text"
                                                            id="ctl00_ContentPlaceHolder1_ctl00_txtTaiKhoa"
                                                            class="TextBox"
-                                                           style="border-color:White;border-style:None;height:16px;width:110px;">
+                                                           oninput ="this.value = this.value.replace(/[!@#$%^&*()_]+/g, '');"
+                                                           style="border-color:White;border-style:None;height:16px;width:110px;" onchange="this.value = this.value.trim()"
+                                                    maxlength="255">
                                                 </td>
                                                 <td width="100px" align="center">&nbsp;<span
                                                         id="ctl00_ContentPlaceHolder1_ctl00_lblMatKhau" class="Label">Mật Khẩu</span>
@@ -363,7 +365,7 @@
                                                            type="password"
                                                            id="ctl00_ContentPlaceHolder1_ctl00_txtMatKhau"
                                                            class="TextBox"
-                                                           style="border-color:White;border-style:None;height:16px;width:120px;">
+                                                    maxlength="255">
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -438,7 +440,7 @@
                                         <img src="./source/iconHome.png" alt="" align="right">
                                     </td>
                                     <td align="left" class="style3">
-                                        <a href="https://qldt.ptit.edu.vn/Default.aspx"><span
+                                        <a href="/index.jsp"><span
                                                 id="ctl00_Footer1_lbltrangchu" class="Label">Trang Chủ</span></a>
                                     </td>
 
@@ -456,15 +458,15 @@
                                         <img src="./source/topTen.gif" width="15px" alt="">
                                     </td>
                                     <td class="style3">
-                                        <a href="https://qldt.ptit.edu.vn/default.aspx?page=dangnhap#Top"
+                                        <a href="/index.jsp"
                                            title="Go to top"
                                            style="text-decoration: none; font-family:Tahoma;font-size:8pt">
                                             <span id="ctl00_Footer1_lbltop" class="Label">Đầu Trang</span>
                                         </a>
                                     </td>
-                                    <td align="right"><a
-                                            href="https://qldt.ptit.edu.vn/Default.aspx?page=thongtinsp"><span
-                                            id="ctl00_Footer1_lblAbout" class="Label">About</span></a></td>
+<%--                                    <td align="right"><a--%>
+<%--                                            href="https://qldt.ptit.edu.vn/Default.aspx?page=thongtinsp"><span--%>
+<%--                                            id="ctl00_Footer1_lblAbout" class="Label">About</span></a></td>--%>
                                 </tr>
 
                                 </tbody>
