@@ -1684,188 +1684,188 @@
                                                rules="all" border="1" cellspacing="0" cellpadding="0">
 
                                             <tbody>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">1</td>
-                                                <td style="display:none" valign="middle" align="center">INT141601</td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1416</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Đảm bảo
-                                                    chất lượng phần mềm
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">01</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT141601    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT141601    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">2</td>
-                                                <td style="display:none" valign="middle" align="center">INT144801</td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1448</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Phát triển
-                                                    phần mềm hướng dịch vụ
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">01</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT144801    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT144801    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">3</td>
-                                                <td style="display:none" valign="middle" align="center">INT146101</td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1461</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Xây dựng
-                                                    các hệ thống nhúng
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">01</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT146101    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT146101    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">4</td>
-                                                <td style="display:none" valign="middle" align="center">INT140801</td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1408</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Chuyên đề
-                                                    công nghệ phần mềm
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">01</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">1</td>
-                                                <td style="width: 35px;" valign="middle" align="center">1</td>
-                                                <td style="width: 80px;" valign="middle" align="right">480,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">480,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT140801    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT140801    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">5</td>
-                                                <td style="display:none" valign="middle" align="center">INT142704</td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1427</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Kiến trúc
-                                                    và thiết kế phần mềm
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">04</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT142704    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT142704    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">6</td>
-                                                <td style="display:none" valign="middle" align="center">TLCD 09</td>
-                                                <td style="width: 60px;" valign="middle" align="center">TLCD</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Tập huấn
-                                                    kiến thức và kỹ năng bảo đảm an toàn, phòng chống và điều trị dịch
-                                                    bệnh trong thời gian trở lại trường học tập và làm việc
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">09</td>
-                                                <td style="width: 45px;" valign="middle" align="center"></td>
-                                                <td style="width: 35px;" valign="middle" align="center">0</td>
-                                                <td style="width: 35px;" valign="middle" align="center">0</td>
-                                                <td style="width: 80px;" valign="middle" align="right">00&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">00&nbsp;</td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_TLCD  09    "
-                                                                                                             name="chk_xoa"
-                                                                                                             value="TLCD  09    "
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 30px;" valign="middle" align="center">7</td>
-                                                <td style="display:none" valign="middle" align="center">INT144905 02
-                                                </td>
-                                                <td style="width: 60px;" valign="middle" align="center">INT1449</td>
-                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Phát triển
-                                                    ứng dụng cho các thiết bị di động
-                                                </td>
-                                                <td style="width: 35px;" valign="middle" align="center">05</td>
-                                                <td style="width: 45px;" valign="middle" align="center">02</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 35px;" valign="middle" align="center">3</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>
-                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;
-                                                </td>
-                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>
-                                                <td valign="middle" align="left" style="width: 50px;"><input style=""
-                                                                                                             type="checkbox"
-                                                                                                             id="chk_INT144905  02"
-                                                                                                             name="chk_xoa"
-                                                                                                             value="INT144905  02"
-                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"
-                                                                                                             disabled="disabled">
-                                                </td>
-                                            </tr>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">1</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT141601</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1416</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Đảm bảo--%>
+<%--                                                    chất lượng phần mềm--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">01</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT141601    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT141601    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">2</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT144801</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1448</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Phát triển--%>
+<%--                                                    phần mềm hướng dịch vụ--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">01</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT144801    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT144801    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT146101</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1461</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Xây dựng--%>
+<%--                                                    các hệ thống nhúng--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">01</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT146101    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT146101    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">4</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT140801</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1408</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Chuyên đề--%>
+<%--                                                    công nghệ phần mềm--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">01</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">1</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">1</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">480,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">480,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT140801    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT140801    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">5</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT142704</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1427</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Kiến trúc--%>
+<%--                                                    và thiết kế phần mềm--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">04</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT142704    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT142704    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">6</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">TLCD 09</td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">TLCD</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Tập huấn--%>
+<%--                                                    kiến thức và kỹ năng bảo đảm an toàn, phòng chống và điều trị dịch--%>
+<%--                                                    bệnh trong thời gian trở lại trường học tập và làm việc--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">09</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center"></td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">0</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">0</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">00&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">00&nbsp;</td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_TLCD  09    "--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="TLCD  09    "--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
+<%--                                            <tr>--%>
+<%--                                                <td style="width: 30px;" valign="middle" align="center">7</td>--%>
+<%--                                                <td style="display:none" valign="middle" align="center">INT144905 02--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 60px;" valign="middle" align="center">INT1449</td>--%>
+<%--                                                <td style="width: 180px;" valign="middle" align="left">&nbsp;Phát triển--%>
+<%--                                                    ứng dụng cho các thiết bị di động--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">05</td>--%>
+<%--                                                <td style="width: 45px;" valign="middle" align="center">02</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 35px;" valign="middle" align="center">3</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">&nbsp;</td>--%>
+<%--                                                <td style="width: 80px;" valign="middle" align="right">1,440,000&nbsp;--%>
+<%--                                                </td>--%>
+<%--                                                <td valign="middle" align="left">&nbsp;Đã lưu vào CSDL</td>--%>
+<%--                                                <td valign="middle" align="left" style="width: 50px;"><input style=""--%>
+<%--                                                                                                             type="checkbox"--%>
+<%--                                                                                                             id="chk_INT144905  02"--%>
+<%--                                                                                                             name="chk_xoa"--%>
+<%--                                                                                                             value="INT144905  02"--%>
+<%--                                                                                                             onclick="CheckToDelete_CheckedChanged(this)"--%>
+<%--                                                                                                             disabled="disabled">--%>
+<%--                                                </td>--%>
+<%--                                            </tr>--%>
                                             <tr style="font-weight: bold;" height="20px">
                                                 <td valign="middle" align="center" colspan="5">Tổng cộng</td>
                                                 <td valign="middle" align="center">16</td>

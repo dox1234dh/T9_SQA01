@@ -273,8 +273,20 @@ function checkedComboBox(maLopHocPhan) {
     if(document.getElementById(maLopHocPhan).checked){
         //them vo bang xem dang ky
         document.getElementById(id).style.backgroundColor = '#CCCCCC';
-            let save = dataGlobal.filter(x => x.maLopHocPhan===maLopHocPhan);
-            if(save.length > 0)  arrSave.push(save[0]);
+        let save = dataGlobal.filter(x => x.maLopHocPhan===maLopHocPhan);
+        if(save.length > 0)  arrSave.push(save[0]);
+        let arrMH = []
+        for(let i = 0 ;i< arrSave.length;i++){
+            arrMH.push(arrSave[i].monHocKiHoc.monHoc.maMonHoc)
+        }
+        let validate = new Set(arrMH).size !== arrMH.length
+        if(validate){
+            arrSave.pop();
+            document.getElementById(maLopHocPhan).checked = false;
+            document.getElementById(id).style.backgroundColor = '#FFFFFF';
+            alert("Môn học này đã chọn rồi, vui lòng kiểm tra lại!")
+            return
+        }
     }
     else{
         //xoa khoi bang them dang ky
@@ -315,15 +327,26 @@ function createTableDK(arrSave) {
             content += "<td style='width: 30px;' valign='middle' align='center' ></td>"
             content += "<td style='width: 35px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.soTc + "</td>"
             content += "<td style='width: 35px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.soTc + "</td>"
-            content += "<td style='width: 80px;' valign='middle' align='center'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
-            content += "<td style='width: 80px;' valign='middle' align='center'></td>"
-            content += "<td style='width: 80px;' valign='middle' align='center'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
+            content += "<td style='width: 80px;' valign='middle' align='right'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
+            content += "<td style='width: 80px;' valign='middle' align='right'></td>"
+            content += "<td style='width: 80px;' valign='middle' align='right'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
             content += "<td valign='middle' align='left'> Chưa lưu vào cơ sở dữ liệu </td>"
             content += "<td valign='middle' align='left' style='width: 50px;'>" +
                 "<input type='checkbox' id='chk_INT141601    ' name='chk_xoa' value='INT141601' onclick='CheckToDelete_CheckedChanged(this)'>" +
                 "</td>"
         }
-        // content +=
+        content += "<tr style=\"font-weight: bold;\" height=\"20px\">\n" +
+            "<td valign=\"middle\" align=\"center\" colspan=\"5\">Tổng cộng</td>\n" +
+            "<td valign=\"middle\" align=\"center\">"+ totalSTC +"</td>\n" +
+            "<td valign=\"middle\" align=\"center\">" + totalSTC + "</td>\n" +
+            "<td valign=\"middle\" align=\"right\">"+totalHP+"</td>\n" +
+            "<td valign=\"middle\" align=\"right\">00&nbsp;</td>\n" +
+            "<td valign=\"middle\" align=\"right\">"+totalPhaiDong+"</td>\n" +
+            "<td valign=\"middle\" align=\"left\"></td>\n" +
+            "<td valign=\"middle\" align=\"center\">\n" +
+            "</td>\n" +
+            "\n" +
+            "</tr>"
         content += "</tbody></table>"
     }
     else{
