@@ -8,7 +8,7 @@ class listMonHoc {
 }
 $(document).ready(function () {
     // debugger;
-    getLsMonhoc('%20');
+    ready('%20');
     $('#selectMonHoc').on('change', function () {
         let valueSelected = this.value;
         getLsHocphan(valueSelected);
@@ -17,6 +17,39 @@ $(document).ready(function () {
     getDK();
 
 })
+function ready(input) {
+    let path = 'http://localhost:8081/monhoc/timkiem/'
+    path = path + input;
+    $('#selectMonHoc')
+        .find('option')
+        .remove()
+        .end()
+    $.ajax({
+        type: 'POST',
+        url: path,
+        contentType: 'application/json',
+        dataType: "JSON",
+        crossDomain: true,
+        processData: true,
+        data : JSON.stringify({'maSinhVien':localStorage.getItem("masv")}),
+        success: function (data) {
+            if (data.error) {
+                alert(data.error);
+                location.reload();
+            } else {
+                // console.log(data.data)
+                if(data.data.length > 0)
+                    for(let i=0;i<data.data.length; i++){
+                        $('select[id="selectMonHoc"]')
+                            .append($('<option />')
+                                .val(data.data[i].maMonHoc)
+                                .text(data.data[i].maMonHoc + ' - ' + data.data[i].tenMonHoc + ' (' + data.data[i].soTc + 'TC)')
+                            );
+                    }
+            }
+        }
+    })
+}
 function getDK() {
     let path = 'http://localhost:8081/dangkytinchi/luudangky/' + localStorage.getItem("masv")
     $.ajax({
@@ -33,13 +66,18 @@ function getDK() {
                 //xu ly thanh 1 list cac mon hoc
                 // let dataList = []
                 // dataList.push();
+                for(let i = 0 ;i<data.data.length;i++){
+                    data.data[i].lopHocPhan.statusDk = "Đã lưu vào CSDL"
+                    arrSave.push(data.data[i].lopHocPhan)
+                }
+                createTableDK(arrSave);
             }
         }
     })
 }
 function getLsMonhoc(input) {
     // console.log(input)
-    let path = 'http://localhost:8081/monhoc/timkiem/'
+    let path = 'http://localhost:8081/monhoc/timkiembutton/'
     path = path + input;
     $('#selectMonHoc')
         .find('option')
@@ -140,10 +178,17 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
     let content = "<table class='body-table' style='border-collapse: collapse;' rules='all' border='1' cellspacing='0' cellpadding='0'>"
     + "<tbody>";
     //dien thong tin cac truong
-    if(arrSave.filter(x => x.maLopHocPhan == MaLop).length > 0)
-        content += "<tr id='changeColor" + maLopHocPhan + "' style='background-color: #CCCCCC'>" + "<td width='25px' align='center'>" +
-            "<input type='checkbox' checked onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
-            + "</td>"
+    if(arrSave.filter(x => x.maLopHocPhan == MaLop).length > 0){
+        if(arrSave.filter(x => x.maLopHocPhan == MaLop)[0].statusDk == "Đã lưu vào CSDL")
+            content += "<tr id='changeColor" + maLopHocPhan + "' style='background-color: #CCCCCC'>" + "<td width='25px' align='center'>" +
+                "<input type='checkbox' checked disabled onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
+                + "</td>"
+        else
+            content += "<tr id='changeColor" + maLopHocPhan + "' style='background-color: #CCCCCC'>" + "<td width='25px' align='center'>" +
+                "<input type='checkbox' checked onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
+                + "</td>"
+    }
+
     else
         content += "<tr id='changeColor" + maLopHocPhan + "'>" + "<td width='25px' align='center'>" +
         "<input type='checkbox' onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
@@ -274,6 +319,7 @@ function checkedComboBox(maLopHocPhan) {
         //them vo bang xem dang ky
         document.getElementById(id).style.backgroundColor = '#CCCCCC';
         let save = dataGlobal.filter(x => x.maLopHocPhan===maLopHocPhan);
+        save[0].statusDk = "Chưa lưu vào cơ sở dữ liệu"
         if(save.length > 0)  arrSave.push(save[0]);
         let arrMH = []
         for(let i = 0 ;i< arrSave.length;i++){
@@ -330,10 +376,18 @@ function createTableDK(arrSave) {
             content += "<td style='width: 80px;' valign='middle' align='right'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
             content += "<td style='width: 80px;' valign='middle' align='right'></td>"
             content += "<td style='width: 80px;' valign='middle' align='right'>" + (arrSave[i].monHocKiHoc.monHoc.soTc*480000) + "</td>"
-            content += "<td valign='middle' align='left'> Chưa lưu vào cơ sở dữ liệu </td>"
-            content += "<td valign='middle' align='left' style='width: 50px;'>" +
-                "<input type='checkbox' id='chk_INT141601    ' name='chk_xoa' value='INT141601' onclick='CheckToDelete_CheckedChanged(this)'>" +
-                "</td>"
+            content += "<td valign='middle' align='left'>" + arrSave[i].statusDk + "</td>"
+            if(arrSave[i].statusDk == "Đã lưu vào CSDL"){
+                content += "<td valign='middle' align='left' style='width: 50px;'>" +
+                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.maMonHoc +"' name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
+                    "</td>"
+            }
+            else{
+                content += "<td valign='middle' align='left' style='width: 50px;'>" +
+                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.maMonHoc +"' disabled name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
+                    "</td>"
+            }
+
         }
         content += "<tr style=\"font-weight: bold;\" height=\"20px\">\n" +
             "<td valign=\"middle\" align=\"center\" colspan=\"5\">Tổng cộng</td>\n" +
@@ -354,4 +408,67 @@ function createTableDK(arrSave) {
     }
     $('#divKQ table').remove();
     $('#divKQ').append(content);
+}
+function luudk() {
+    // arrSave : danh sách môn học đã chọn để lưu
+    // validate
+    let path = 'http://localhost:8081/dangkytinchi/luudangky/' + localStorage.getItem("masv")
+    let totalTc = 0;
+    let data = [];
+    for(let i = 0;i< arrSave.length;i++){
+        data.push(arrSave[i].maLopHocPhan);
+        totalTc += arrSave[i].monHocKiHoc.monHoc.soTc;
+    }
+    if(totalTc < 14){
+        alert("Chưa đủ tối thiểu 14 tín chỉ để lưu đăng ký")
+        return;
+    }
+
+    console.log(JSON.stringify({'maLopHocPhan':data}))
+    // $.ajax({
+    //     type: 'POST',
+    //     url: path,
+    //     contentType: 'application/json',
+    //     dataType: "JSON",
+    //     crossDomain: true,
+    //     processData: true,
+    //     data : JSON.stringify({'maLopHocPhan':data}),
+    //     success: function (data) {
+    //         if (data.error) {
+    //             alert(data.error);
+    //             location.reload();
+    //         } else {
+    //             // console.log(data.data)
+    //             alert()
+    //         }
+    //     }
+    // })
+}
+
+function xoaMonHocDk() {
+    let lsDelMonHoc = []
+    $("input[name='chk_xoa']:checkbox:checked").each(function (index, obj) {
+        // loop all checked items
+        console.log(index)
+        lsDelMonHoc.push(this.getAttribute('value'))
+    });
+    console.log(lsDelMonHoc)
+    // $.ajax({
+    //     type: 'POST',
+    //     url: path,
+    //     contentType: 'application/json',
+    //     dataType: "JSON",
+    //     crossDomain: true,
+    //     processData: true,
+    //     data : JSON.stringify({'maSinhVien':localStorage.getItem("masv")}),
+    //     success: function (data) {
+    //         if (data.error) {
+    //             alert(data.error);
+    //             location.reload();
+    //         } else {
+    //             // console.log(data.data)
+    //
+    //         }
+    //     }
+    // })
 }

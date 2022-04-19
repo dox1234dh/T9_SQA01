@@ -75,7 +75,7 @@
 </head>
 
 <body background="./source/background.png" onload="ShowMess()">
-<form name="aspnetForm" method="post" action="locahost:http://localhost:8081/sinhvien/dangnhap" id="aspnetForm"
+<form name="aspnetForm" method="post" action="locahost:http://192.168.0.233:8081/sinhvien/dangnhap" id="aspnetForm"
       enctype="multipart/form-data">
     <div>
         <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
@@ -199,12 +199,12 @@
                                         <div id="ctl00_Header1_Logout1_dLog" class="logout"
                                              style="text-align: right; margin-bottom: 0px">
 
-                                            <img src="./source/US.gif" alt="English"
-                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"
-                                                 title="English">
-                                            <img src="./source/VI.gif" alt="Vietnamese"
-                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"
-                                                 title="Vietnamese">
+<%--                                            <img src="./source/US.gif" alt="English"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"--%>
+<%--                                                 title="English">--%>
+<%--                                            <img src="./source/VI.gif" alt="Vietnamese"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"--%>
+<%--                                                 title="Vietnamese">--%>
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
                                                   style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn </span>&nbsp;
 
@@ -487,7 +487,6 @@
 <%--        //]]>--%>
 <%--    </script>--%>
 </form>
-
-
-<%--<img src="./source/arrowdown.gif" id="arrowhead"></body>--%>
+<%--<img src="./source/arrowdown.gif" id="arrowhead">--%>
+</body>
 </html>

@@ -252,18 +252,14 @@
                                         <div id="ctl00_Header1_Logout1_dLog" class="logout"
                                              style="text-align: right; margin-bottom: 0px">
 
-                                            <img src="./source-ttcn/US.gif" alt="English"
-                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"
-                                                 title="English">
-                                            <img src="./source-ttcn/VI.gif" alt="Vietnamese"
-                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"
-                                                 title="Vietnamese">
+<%--                                            <img src="./source-ttcn/US.gif" alt="English"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"--%>
+<%--                                                 title="English">--%>
+<%--                                            <img src="./source-ttcn/VI.gif" alt="Vietnamese"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"--%>
+<%--                                                 title="Vietnamese">--%>
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<a
-                                                id="ctl00_Header1_Logout1_lbtnThongBao"
-                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnThongBao&#39;,&#39;&#39;)"
-                                                style="color:MistyRose;font-size:12px;font-style:italic;font-family: &#39;Tahoma&#39;, Times, serif">Xem
-                                            thông báo</a><span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
                                                                style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnChangePass"
                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"
@@ -274,17 +270,17 @@
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
                                                href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
-                                            &nbsp;<select id="selectFont"
-                                                          style="font-size: 11px; width: 100px; color: #000080;"
-                                                          onchange="selectFont_change()">
-                                            <option value="uni">-------Font-------</option>
-                                            <option value="uni" selected="">Font Unicode</option>
-                                            <option value="abc">Font ABC</option>
-                                            <option value="vni">Font Vni</option>
-                                            <option value="not">Text không
-                                                dấu
-                                            </option>
-                                        </select>
+<%--                                            &nbsp;<select id="selectFont"--%>
+<%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
+<%--                                                          onchange="selectFont_change()">--%>
+<%--                                            <option value="uni">-------Font-------</option>--%>
+<%--                                            <option value="uni" selected="">Font Unicode</option>--%>
+<%--                                            <option value="abc">Font ABC</option>--%>
+<%--                                            <option value="vni">Font Vni</option>--%>
+<%--                                            <option value="not">Text không--%>
+<%--                                                dấu--%>
+<%--                                            </option>--%>
+<%--                                        </select>--%>
                                         </div>
 
                                     </td>
@@ -357,7 +353,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThi"
                                                       class="Label">XEM LỊCH THI</span></a>
                                         </div>
@@ -369,7 +365,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthilai">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThiLai"
                                                       class="Label">XEM LỊCH THI LẠI</span></a>
                                         </div>
@@ -382,7 +378,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemhocphi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemHocPhi" class="Label">XEM HỌC PHÍ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -394,7 +390,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemdiemthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemDiem" class="Label">XEM ĐIỂM</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -406,7 +402,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ctdtkhoisv">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemCTDTKhoiSV" class="Label">XEM CTĐT</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -417,7 +413,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemmontienquyet">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemMonTQ" class="Label">XEM MÔN TQ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -440,7 +436,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ykiensinhvien">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblykiensinhvien"
                                                       class="Label">GÓP Ý KIẾN</span></a>
                                         </div>

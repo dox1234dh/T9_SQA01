@@ -207,12 +207,12 @@
                                         <div id="ctl00_Header1_Logout1_dLog" class="logout"
                                              style="text-align: right; margin-bottom: 0px">
 
-                                            <img src="./source-dkmh/US.gif" alt="English"
-                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"
-                                                 title="English">
-                                            <img src="./source-dkmh/VI.gif" alt="Vietnamese"
-                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"
-                                                 title="Vietnamese">
+<%--                                            <img src="./source-dkmh/US.gif" alt="English"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_us&#39;)" id="imgUS"--%>
+<%--                                                 title="English">--%>
+<%--                                            <img src="./source-dkmh/VI.gif" alt="Vietnamese"--%>
+<%--                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"--%>
+<%--                                                 title="Vietnamese">--%>
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
                                                   style="color:MistyRose;font-size:12px;font-weight:bold;"></span>&nbsp;
                                             <span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
@@ -227,17 +227,17 @@
                                                href="http://localhost:8080/index.jsp"
                                                onclick="clearSession()"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
-                                            &nbsp;<select id="selectFont"
-                                                          style="font-size: 11px; width: 100px; color: #000080;"
-                                                          onchange="selectFont_change()">
-                                            <option value="uni">-------Font-------</option>
-                                            <option value="uni" selected="">Font Unicode</option>
-                                            <option value="abc">Font ABC</option>
-                                            <option value="vni">Font Vni</option>
-                                            <option value="not">Text không
-                                                dấu
-                                            </option>
-                                        </select>
+<%--                                            &nbsp;<select id="selectFont"--%>
+<%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
+<%--                                                          onchange="selectFont_change()">--%>
+<%--                                            <option value="uni">-------Font-------</option>--%>
+<%--                                            <option value="uni" selected="">Font Unicode</option>--%>
+<%--                                            <option value="abc">Font ABC</option>--%>
+<%--                                            <option value="vni">Font Vni</option>--%>
+<%--                                            <option value="not">Text không--%>
+<%--                                                dấu--%>
+<%--                                            </option>--%>
+<%--                                        </select>--%>
                                         </div>
 
                                     </td>
@@ -310,7 +310,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThi"
                                                       class="Label">XEM LỊCH THI</span></a>
                                         </div>
@@ -322,7 +322,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemlichthilai">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemLichThiLai"
                                                       class="Label">XEM LỊCH THI LẠI</span></a>
                                         </div>
@@ -335,7 +335,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemhocphi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemHocPhi" class="Label">XEM HỌC PHÍ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -347,7 +347,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemdiemthi">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemDiem" class="Label">XEM ĐIỂM</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -359,7 +359,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ctdtkhoisv">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemCTDTKhoiSV" class="Label">XEM CTĐT</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -370,7 +370,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=xemmontienquyet">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblXemMonTQ" class="Label">XEM MÔN TQ</span></a>
                                         </div>
                                         <div class="right"></div>
@@ -393,7 +393,7 @@
 
                                         <div class="left"></div>
                                         <div class="center" style="white-space: nowrap">
-                                            <a href="https://qldt.ptit.edu.vn/Default.aspx?page=ykiensinhvien">
+                                            <a onclick="{alert('Chức năng đang phát triển')}">
                                                 <span id="ctl00_menu_lblykiensinhvien"
                                                       class="Label">GÓP Ý KIẾN</span></a>
                                         </div>
@@ -1066,7 +1066,7 @@
                             function btnLocTheoTenMh_click() {
                                 var monHocLoc = document.getElementById("txtMaMH1");
                                 if (monHocLoc.value == "") {
-                                    getLsMonhoc("%20")
+                                    ready("%20")
                                 } else {
                                     // document.body.style.cursor = 'wait';
                                     getLsMonhoc(monHocLoc.value)
@@ -1634,12 +1634,12 @@
                                         <tbody>
                                         <tr>
                                             <td colspan="11" align="right" style="background-color:#6699FF;height:5px;">
-                                                <input type="button" id="btnLuu" disabled="" value="Lưu Đăng Ký"
-                                                       onclick="LuuDanhSachDangKy()">
+                                                <input type="button" id="btnLuu" value="Lưu Đăng Ký"
+                                                       onclick="luudk()">
                                             </td>
                                             <td align="center" style="background-color:#6699FF;height:5px;">
-                                                <input type="button" disabled="" id="bntXoaChon" value="Xóa"
-                                                       onclick="xoaTuDanhSach(this.form.chk_xoa, false)">
+                                                <input type="button"  id="bntXoaChon" value="Xóa"
+                                                       onclick="xoaMonHocDk()">
                                             </td>
                                         </tr>
                                         <tr align="center">
