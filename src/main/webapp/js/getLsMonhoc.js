@@ -414,35 +414,36 @@ function luudk() {
     // validate
     let path = 'http://localhost:8081/dangkytinchi/luudangky/' + localStorage.getItem("masv")
     let totalTc = 0;
-    let data = [];
+    let dataSend = [];
     for(let i = 0;i< arrSave.length;i++){
-        data.push(arrSave[i].maLopHocPhan);
+        if(arrSave[i].statusDk === "Chưa lưu vào cơ sở dữ liệu"){
+            let dataIdx = {"maLopHocPhan": arrSave[i].maLopHocPhan}
+            dataSend.push(dataIdx)
+        }
         totalTc += arrSave[i].monHocKiHoc.monHoc.soTc;
     }
     if(totalTc < 14){
         alert("Chưa đủ tối thiểu 14 tín chỉ để lưu đăng ký")
         return;
     }
-
-    console.log(JSON.stringify({'maLopHocPhan':data}))
-    // $.ajax({
-    //     type: 'POST',
-    //     url: path,
-    //     contentType: 'application/json',
-    //     dataType: "JSON",
-    //     crossDomain: true,
-    //     processData: true,
-    //     data : JSON.stringify({'maLopHocPhan':data}),
-    //     success: function (data) {
-    //         if (data.error) {
-    //             alert(data.error);
-    //             location.reload();
-    //         } else {
-    //             // console.log(data.data)
-    //             alert()
-    //         }
-    //     }
-    // })
+    console.log(dataSend)
+    $.ajax({
+        type: 'POST',
+        url: path,
+        contentType: 'application/json',
+        dataType: "JSON",
+        crossDomain: true,
+        processData: true,
+        data : JSON.stringify(dataSend),
+        success: function (data) {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                alert(data.data)
+                location.reload();
+            }
+        }
+    })
 }
 
 function xoaMonHocDk() {
