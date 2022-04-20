@@ -1,11 +1,5 @@
 let dataGlobal;
 let arrSave = [];
-class listMonHoc {
-    // constructor(masv, ten) {
-    //     this.masv = masv;
-    //     this.ten = ten;
-    // }
-}
 $(document).ready(function () {
     // debugger;
     ready('%20');
@@ -62,7 +56,7 @@ function getDK() {
                 alert(data.error);
                 location.reload();
             } else {
-                console.log(data.data);
+                // console.log(data.data);
                 //xu ly thanh 1 list cac mon hoc
                 // let dataList = []
                 // dataList.push();
@@ -130,7 +124,7 @@ function getLsHocphan(input) {
                 alert(data.error);
                 location.reload();
             } else {
-                console.log(data.data)
+                // console.log(data.data)
                 let table;
                 dataGlobal = data.data
                 // arrLopHocPhan = [];
@@ -158,7 +152,7 @@ function getLsHocphan(input) {
                     }
                     else{
                         let tuan = getLsTuan(data.data[i].dsLichHoc)
-                        console.log(tuan)
+                        // console.log(tuan)
                         table = createTable(input, data.data[i].monHocKiHoc.monHoc.tenMonHoc,
                             i+1,data.data[i].monHocKiHoc.monHoc.soTc,
                             data.data[i].monHocKiHoc.monHoc.soTc, data.data[i].maLopHocPhan,
@@ -312,8 +306,8 @@ function initData(type, arr) {
 
 function checkedComboBox(maLopHocPhan) {
     let id = 'changeColor' + maLopHocPhan
-    console.log(maLopHocPhan)
-    console.log(dataGlobal)
+    // console.log(maLopHocPhan)
+    // console.log(dataGlobal)
     // debugger
     if(document.getElementById(maLopHocPhan).checked){
         //them vo bang xem dang ky
@@ -347,7 +341,7 @@ function checkedComboBox(maLopHocPhan) {
                 }
             }
     }
-    console.log(arrSave)
+    // console.log(arrSave)
     createTableDK(arrSave);
 }
 
@@ -379,12 +373,12 @@ function createTableDK(arrSave) {
             content += "<td valign='middle' align='left'>" + arrSave[i].statusDk + "</td>"
             if(arrSave[i].statusDk == "Đã lưu vào CSDL"){
                 content += "<td valign='middle' align='left' style='width: 50px;'>" +
-                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.maMonHoc +"' name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
+                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.soTc +"' name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
                     "</td>"
             }
             else{
                 content += "<td valign='middle' align='left' style='width: 50px;'>" +
-                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.maMonHoc +"' disabled name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
+                    "<input type='checkbox' id='" + arrSave[i].monHocKiHoc.monHoc.soTc +"' disabled name='chk_xoa' value='" + arrSave[i].maLopHocPhan +"'>" +
                     "</td>"
             }
 
@@ -422,11 +416,15 @@ function luudk() {
         }
         totalTc += arrSave[i].monHocKiHoc.monHoc.soTc;
     }
+    if(dataSend.length === 0){
+        alert("Vui lòng chọn môn học để lưu đăng ký")
+        return;
+    }
     if(totalTc < 14){
         alert("Chưa đủ tối thiểu 14 tín chỉ để lưu đăng ký")
         return;
     }
-    console.log(dataSend)
+    // console.log(dataSend)
     $.ajax({
         type: 'POST',
         url: path,
@@ -447,29 +445,42 @@ function luudk() {
 }
 
 function xoaMonHocDk() {
+    let path = 'http://localhost:8081/dangkytinchi/xoadangky/' + localStorage.getItem("masv")
     let lsDelMonHoc = []
+    let totalTcXoa = 0
+    let totalTc = 0
     $("input[name='chk_xoa']:checkbox:checked").each(function (index, obj) {
         // loop all checked items
-        console.log(index)
-        lsDelMonHoc.push(this.getAttribute('value'))
+        totalTcXoa += parseInt(this.getAttribute('id'))
+        let idxMH = {"maLopHocPhan": this.getAttribute('value')};
+        lsDelMonHoc.push(idxMH)
     });
-    console.log(lsDelMonHoc)
-    // $.ajax({
-    //     type: 'POST',
-    //     url: path,
-    //     contentType: 'application/json',
-    //     dataType: "JSON",
-    //     crossDomain: true,
-    //     processData: true,
-    //     data : JSON.stringify({'maSinhVien':localStorage.getItem("masv")}),
-    //     success: function (data) {
-    //         if (data.error) {
-    //             alert(data.error);
-    //             location.reload();
-    //         } else {
-    //             // console.log(data.data)
-    //
-    //         }
-    //     }
-    // })
+    for(let i = 0;i< arrSave.length;i++){
+        totalTc += arrSave[i].monHocKiHoc.monHoc.soTc;
+    }
+    if(totalTcXoa === 0){
+        alert("Vui lòng chọn các môn để xóa")
+        return;
+    }
+    if(totalTc-totalTcXoa < 14){
+        alert("Tổng số tín chỉ đăng ký tối thiểu 14 tín chỉ")
+        return;
+    }
+    $.ajax({
+        type: 'POST',
+        url: path,
+        contentType: 'application/json',
+        dataType: "JSON",
+        crossDomain: true,
+        processData: true,
+        data : JSON.stringify(lsDelMonHoc),
+        success: function (data) {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                alert(data.data)
+                location.reload();
+            }
+        }
+    })
 }
