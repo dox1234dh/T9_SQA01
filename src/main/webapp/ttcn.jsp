@@ -20,7 +20,8 @@
     <meta name="google-signin-scope" content="profile email">
     <meta id="ctl00_metaGoogle" name="google-signin-client_id">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://qldt.ptit.edu.vn/Images/Edusoft.gif">
-    <script src="./source-ttcn/jquery-2.2.1.js.tải xuống" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/doiMk.js" type="text/javascript"></script>
     <script src="./source-ttcn/dialog.js.tải xuống" type="text/javascript"></script>
     <script src="./source-ttcn/checkdate.js.tải xuống" type="text/javascript"></script>
     <script src="./source-ttcn/balloontip.js.tải xuống" type="text/javascript"></script>
@@ -38,31 +39,31 @@
                 alert('Vui lòng tắt và mở lại trình duyệt!');
         }
 
-        $(function () {
-            if (typeof AjaxPro != 'undefined' && AjaxPro && AjaxPro.Request && AjaxPro.Request.prototype) {
-                AjaxPro.Request.prototype.doStateChange = function () {
-                    this.onStateChanged(this.xmlHttp.readyState, this);
-                    if (this.xmlHttp.readyState != 4 || !this.isRunning) {
-                        return;
-                    }
-                    this.duration = new Date().getTime() - this.__start;
-                    if (this.timeoutTimer != null) {
-                        clearTimeout(this.timeoutTimer);
-                    }
-                    var res = this.getEmptyRes();
-                    if (this.xmlHttp.status == 200 && (this.xmlHttp.statusText == "OK" || !this.xmlHttp.statusText)) {
-                        res = this.createResponse(res);
-                    } else {
-                        res = this.createResponse(res, true);
-                        res.error = {
-                            Message: this.xmlHttp.statusText,
-                            Type: "ConnectFailure",
-                            Status: this.xmlHttp.status
-                        };
-                    }
-                    this.endRequest(res);
-                };
-            }
+        // $(function () {
+        //     if (typeof AjaxPro != 'undefined' && AjaxPro && AjaxPro.Request && AjaxPro.Request.prototype) {
+        //         AjaxPro.Request.prototype.doStateChange = function () {
+        //             this.onStateChanged(this.xmlHttp.readyState, this);
+        //             if (this.xmlHttp.readyState != 4 || !this.isRunning) {
+        //                 return;
+        //             }
+        //             this.duration = new Date().getTime() - this.__start;
+        //             if (this.timeoutTimer != null) {
+        //                 clearTimeout(this.timeoutTimer);
+        //             }
+        //             var res = this.getEmptyRes();
+        //             if (this.xmlHttp.status == 200 && (this.xmlHttp.statusText == "OK" || !this.xmlHttp.statusText)) {
+        //                 res = this.createResponse(res);
+        //             } else {
+        //                 res = this.createResponse(res, true);
+        //                 res.error = {
+        //                     Message: this.xmlHttp.statusText,
+        //                     Type: "ConnectFailure",
+        //                     Status: this.xmlHttp.status
+        //                 };
+        //             }
+        //             this.endRequest(res);
+        //         };
+        //     }
             //gapi.load('auth2', function () {
             //    gapi.auth2.GoogleUser(u => {
             //        u.getAuthResponse(a => {
@@ -74,7 +75,7 @@
             //        });
             //    });
             //}
-        });
+        // });
     </script>
 
     <link href="./source-ttcn/WebResource.axd" rel="stylesheet" type="text/css">
@@ -83,14 +84,14 @@
 </head>
 
 <body background="./source-ttcn/background.png" onload="ShowMess()">
-<form name="aspnetForm" method="post" action="https://qldt.ptit.edu.vn/default.aspx?page=thaydoittcn" id="aspnetForm"
-      enctype="multipart/form-data">
-    <div>
-        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
-        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-               value="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">
-    </div>
+<%--<form name="aspnetForm" method="post" action="https://qldt.ptit.edu.vn/default.aspx?page=thaydoittcn" id="aspnetForm"--%>
+<%--      enctype="multipart/form-data">--%>
+<%--    <div>--%>
+<%--        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">--%>
+<%--        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">--%>
+<%--        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"--%>
+<%--               value="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">--%>
+<%--    </div>--%>
 
     <script type="text/javascript">
         //<![CDATA[
@@ -165,7 +166,7 @@
         //]]>
     </script>
 
-    <script src="./source-ttcn/ScriptResource(1).axd" type="text/javascript"></script>
+<%--    <script src="./source-ttcn/ScriptResource(1).axd" type="text/javascript"></script>--%>
     <script src="./source-ttcn/ScriptResource(2).axd" type="text/javascript"></script>
     <script src="./source-ttcn/ScriptResource(3).axd" type="text/javascript"></script>
     <script src="./source-ttcn/ScriptResource(4).axd" type="text/javascript"></script>
@@ -268,7 +269,7 @@
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnLogOut&#39;,&#39;&#39;)"
+                                               href="/index.jsp"
                                                style="color:MistyRose;font-size:10pt;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thoát</a>
 <%--                                            &nbsp;<select id="selectFont"--%>
 <%--                                                          style="font-size: 11px; width: 100px; color: #000080;"--%>
@@ -481,12 +482,12 @@
                 <tr>
                     <td height="500px" valign="top">
 
-                        <script type="text/javascript">
-                            //<![CDATA[
-                            Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ctl00$ScriptManager1', document.getElementById('aspnetForm'));
-                            Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
-                            //]]>
-                        </script>
+<%--                        <script type="text/javascript">--%>
+<%--                            //<![CDATA[--%>
+<%--                            Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ctl00$ScriptManager1', document.getElementById('aspnetForm'));--%>
+<%--                            Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);--%>
+<%--                            //]]>--%>
+<%--                        </script>--%>
 
                         <span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1"><a
                                 id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lbTarget"
@@ -693,9 +694,9 @@
                                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblMKHTai"
                                                                       class="Label">Nhập mật khẩu hiện tại:</span>
                                                                 <input
-                                                                        name="ctl00$ContentPlaceHolder1$ctl00$txtMKHienTai"
+                                                                        name="MKHienTai"
                                                                         type="password"
-                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtMKHienTai"
+                                                                        id="MKHienTai"
                                                                         title="Nhập mật khẩu hiện tại!" class="TextBox"
                                                                         style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
@@ -707,7 +708,7 @@
                                                                 <input
                                                                         name="ctl00$ContentPlaceHolder1$ctl00$txtMKMoi"
                                                                         type="password"
-                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtMKMoi"
+                                                                        id="MKMoi"
                                                                         title="Nhập vào mật khẩu mới!" class="TextBox"
                                                                         style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
@@ -719,7 +720,7 @@
                                                                 <input
                                                                         name="ctl00$ContentPlaceHolder1$ctl00$txtXacNhanMK"
                                                                         type="password"
-                                                                        id="ctl00_ContentPlaceHolder1_ctl00_txtXacNhanMK"
+                                                                        id="XacNhanMK"
                                                                         title="Xác nhận lại mật khẩu mới!" class="TextBox"
                                                                         style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
                                                             </td>
@@ -778,11 +779,11 @@
                                             <td align="right" class="style1">
                                                 <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnLuuLai"
                                                        value="Lưu lại" id="ctl00_ContentPlaceHolder1_ctl00_btnLuuLai"
-                                                       class="DefaultButton">
+                                                       class="DefaultButton" onclick="doiMk();">
                                             </td>
                                             <td align="left">&nbsp;
                                                 <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnHuyBo"
-                                                       value="Hủy bỏ" onclick="return check();"
+                                                       value="Hủy bỏ" onclick="xoaForm();"
                                                        id="ctl00_ContentPlaceHolder1_ctl00_btnHuyBo"
                                                        class="DefaultButton">
                                             </td>
