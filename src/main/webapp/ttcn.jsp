@@ -15,16 +15,17 @@
 
         var gv = 'False';
     </script>
-    <script type="text/javascript" src="./source-ttcn/platform.js.tải xuống" async="" defer=""
+    <script type="text/javascript" src="./source-ttcn/platform.js" async="" defer=""
             gapi_processed="true"></script>
     <meta name="google-signin-scope" content="profile email">
     <meta id="ctl00_metaGoogle" name="google-signin-client_id">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://qldt.ptit.edu.vn/Images/Edusoft.gif">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="./js/doiMk.js" type="text/javascript"></script>
-    <script src="./source-ttcn/dialog.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-ttcn/checkdate.js.tải xuống" type="text/javascript"></script>
-    <script src="./source-ttcn/balloontip.js.tải xuống" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
+    <script src="./source-ttcn/dialog.js" type="text/javascript"></script>
+    <script src="./source-ttcn/checkdate.js" type="text/javascript"></script>
+    <script src="./source-ttcn/balloontip.js" type="text/javascript"></script>
     <link href="./source-ttcn/balloontip.css" rel="stylesheet" type="text/css">
     <title>
         Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
@@ -260,12 +261,12 @@
 <%--                                                 onclick="changeLanguage_click(&#39;_vi&#39;)" id="imgVi"--%>
 <%--                                                 title="Vietnamese">--%>
                                             <span id="ctl00_Header1_Logout1_lblNguoiDung" class="Label"
-                                                  style="color:MistyRose;font-size:12px;font-weight:bold;">Chào bạn Trần Văn Đô (B18DCCN158)</span>&nbsp;<span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
+                                                  style="color:MistyRose;font-size:12px;font-weight:bold;" onload="setName()"></span>&nbsp;<span id="ctl00_Header1_Logout1_lblXiet1" class="Label"
                                                                style="color:MistyRose;"> | </span>
-                                            <a id="ctl00_Header1_Logout1_lbtnChangePass"
-                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"
-                                               style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay
-                                                đổi mật khẩu</a>
+<%--                                            <a id="ctl00_Header1_Logout1_lbtnChangePass"--%>
+<%--                                               href="javascript:__doPostBack(&#39;ctl00$Header1$Logout1$lbtnChangePass&#39;,&#39;&#39;)"--%>
+<%--                                               style="color:MistyRose;font-size:12px;font-weight:bold;font-family: &#39;Tahoma&#39;, Times, serif">Thay--%>
+<%--                                                đổi mật khẩu</a>--%>
                                             <span id="ctl00_Header1_Logout1_lblXiet2" class="Label"
                                                   style="color:MistyRose;"> | </span>
                                             <a id="ctl00_Header1_Logout1_lbtnLogOut"
@@ -505,8 +506,8 @@
 	</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelBody" class="body"
                style="background-color:#E1E5F0;">
 		<div class="body-left" style="background-color:#E1E5F0;">
-			<img id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl02"
-                 src="https://qldt.ptit.edu.vn/default.aspx?page=thaydoittcn" style="border-width:0px;">
+<%--			<img id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl02"--%>
+<%--                 src="https://qldt.ptit.edu.vn/default.aspx?page=thaydoittcn" style="border-width:0px;">--%>
 		</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl03" class="body-right"
                    style="background-color:#E1E5F0;">
 			<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lblMessageDisplay" class="Label"
@@ -589,7 +590,7 @@
                                                       class="Label">Tài khoản:</span>
                                                 <span
                                                         id="ctl00_ContentPlaceHolder1_ctl00_lblTaiKhoan" class="Label"
-                                                        style="font-weight:bold;font-style:italic;">B18DCCN158</span>
+                                                        style="font-weight:bold;font-style:italic;"></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -597,10 +598,13 @@
                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_labelHoTen" class="Label">Họ tên:</span>
                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblHoTen"
                                                       class="Label"
-                                                      style="font-weight:bold;font-style:italic;">Trần Văn Đô</span>
+                                                      style="font-weight:bold;font-style:italic;"></span>
                                             </td>
                                         </tr>
-
+                                        <script>
+                                            document.getElementById('ctl00_ContentPlaceHolder1_ctl00_lblTaiKhoan').innerHTML = localStorage.getItem('masv')
+                                            document.getElementById('ctl00_ContentPlaceHolder1_ctl00_lblHoTen').innerHTML = localStorage.getItem('ten')
+                                        </script>
 <%--                                        <tr>--%>
 <%--                                            <td class="style1" bgcolor="#CCCCFF" align="left">&nbsp;&nbsp;<b><span--%>
 <%--                                                    id="ctl00_ContentPlaceHolder1_ctl00_labelPhone" class="Label">Điện thoại</span></b>--%>
@@ -685,8 +689,8 @@
                                                                 &nbsp;&nbsp;<span
                                                                     id="ctl00_ContentPlaceHolder1_ctl00_lblTDMatKhau"
                                                                     class="Label" style="font-weight:bold;">Thay đổi mật khẩu</span>
-                                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblLuuY"
-                                                                      class="Label" style="font-weight:bold;">  (Lưu ý: mật khẩu cần khác với mật khẩu mặc định ngày sinh )</span>
+<%--                                                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblLuuY"--%>
+<%--                                                                      class="Label" style="font-weight:bold;">  (Lưu ý: mật khẩu cần khác với mật khẩu mặc định ngày sinh )</span>--%>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -889,5 +893,6 @@
 </form>
 
 
-<img src="./source-ttcn/arrowdown.gif" id="arrowhead"></body>
+<%--<img src="./source-ttcn/arrowdown.gif" id="arrowhead">--%>
+</body>
 </html>
