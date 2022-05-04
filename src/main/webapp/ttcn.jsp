@@ -681,7 +681,7 @@
                                             <td colspan="2">
                                                 <div id="ctl00_ContentPlaceHolder1_ctl00_pnlTDMatKhau"
                                                      style="width:100%;">
-
+                                                <form>
                                                     <table width="100%">
                                                         <tbody>
                                                         <tr>
@@ -702,7 +702,7 @@
                                                                         type="password"
                                                                         id="MKHienTai"
                                                                         title="Nhập mật khẩu hiện tại!" class="TextBox"
-                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()"/>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -714,7 +714,7 @@
                                                                         type="password"
                                                                         id="MKMoi"
                                                                         title="Nhập vào mật khẩu mới!" class="TextBox"
-                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" onchange="this.value = this.value.trim()" required/>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -726,7 +726,7 @@
                                                                         type="password"
                                                                         id="XacNhanMK"
                                                                         title="Xác nhận lại mật khẩu mới!" class="TextBox"
-                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()">
+                                                                        style="font-weight:bold;font-style:normal;width:240px;" required onchange="this.value = this.value.trim()"/>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -783,16 +783,17 @@
                                             <td align="right" class="style1">
                                                 <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnLuuLai"
                                                        value="Lưu lại" id="ctl00_ContentPlaceHolder1_ctl00_btnLuuLai"
-                                                       class="DefaultButton" onclick="doiMk();">
+                                                       class="DefaultButton" onclick="doiMk();"/>
                                             </td>
                                             <td align="left">&nbsp;
                                                 <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnHuyBo"
                                                        value="Hủy bỏ" onclick="xoaForm();"
                                                        id="ctl00_ContentPlaceHolder1_ctl00_btnHuyBo"
-                                                       class="DefaultButton">
+                                                       class="DefaultButton"/>
                                             </td>
                                         </tr>
                                         </tbody>
+                                        </form>
                                     </table>
                                 </div>
                             </fieldset>

@@ -24,6 +24,7 @@
     <script src="./source-tkb/dialog.js" type="text/javascript"></script>
     <script src="./source-tkb/checkdate.js" type="text/javascript"></script>
     <script src="./source-tkb/balloontip.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/createTkb.js"></script>
     <link href="./source-tkb/balloontip.css" rel="stylesheet" type="text/css">
     <title>
         Cổng Thông Tin Đào Tạo-Học Viện Công Nghệ Bưu Chính Viễn Thông-Cơ Sở Miền Bắc-BCVTVTHN
@@ -651,6 +652,7 @@
                                     if (typeof thecolor != "undefined" && thecolor != "") tipobj.style.backgroundColor = thecolor;
 
                                     var nums = num.split("-");
+                                    // console.log(nums);
                                     if (tkbTuan == "0") {
                                         tipobj.innerHTML = "<table cellpadding='0' border='0' CellSpacing='0' style='text-align:left;font-size:10pt;font-family:tahoma;font-weight:bold'><tr height='20px'><td colspan='3' valign='top'><table><tr><td width='5px'></td><td width='30px' valign='top'><IMG src='https://qldt.ptit.edu.vn/App_Themes/Standard/Images/Learning.gif' width='30' height='42'/></td><td align='left'><span style='font-size:11pt ;font-weight:bold;color:#ffffff'>" + tenMH + "</span></td></tr></table></td></tr><tr height='20px'><td width='40px'></td><td colspan='2'> </td></tr><tr><td width='40px'></td><td>" + nums[0] + " :</td><td><span style='color:Teal'>" + maMH + "</span></td></tr><tr><td width='40px'></td><td>" + nums[1] + " :</td><td><span style='color:Teal'>" + tenMH + "</span></td></tr><tr><td width='40px'></td><td width='120px'>" + nums[2] + " :</td><td><span style='color:Teal'>" + Phong + "</span></td></tr><tr><td width='40px'></td><td>" + nums[3] + " :</td><td><span style='color:Teal'>" + Thu + "</span></td></tr><tr><td width='40px'></td><td width='120px'>" + nums[4] + " :</td><td><span style='color:Teal'>" + tbd + "</span></td></tr><tr><td width='40px'></td><td width='120px'>" + nums[5] + " :</td><td><span style='color:Teal'>" + st + "</span></td></tr><tr><td width='40px'></td><td>" + nums[6] + " :</td><td><span style='color:Teal'>" + giaoVien.split('_').join(' ') + "</span></td></tr>  <tr><td width='40px'></td><td>" + nums[9] + " :</td><td><span style='color:Teal'>" + maLop + "</span></td></tr>  <tr><td width='40px'></td><td>" + nums[7] + " :</td><td><span style='color:Teal'>" + ngaybd + "</span><span style='font-style:italic;color:gray'> " + nums[8] + "</span> <span style='color:Teal'>" + ngaykt + "</span></td></tr></table>";
                                     } else {
@@ -763,104 +765,36 @@
                                         </td>
                                         <td align="left" valign="top">
                                             <span id="ctl00_ContentPlaceHolder1_ctl00_lblTT" class="Label"
-                                                  style="font-size:10pt;">Chọn học kỳ xem TKB</span>&nbsp;
-                                            <select name="ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK"
-                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK\&#39;,\&#39;\&#39;)&#39;, 0)"
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_ddlChonNHHK" class="DropDown"
-                                                    style="height:20px;width:215px;">
-                                                <option selected="selected" value="20212">Học kỳ 2 - Năm học 2021-2022
-                                                </option>
-                                                <option value="20211">Học kỳ 1 - Năm học 2021-2022</option>
-                                                <option value="20203">Học kỳ 3 - Năm học 2020-2021</option>
-                                                <option value="20202">Học kỳ 2 - Năm học 2020-2021</option>
+                                                  style="font-size:10pt;">Học kỳ xem TKB</span>&nbsp;
+<%--                                            <select name="ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK"--%>
+<%--                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK\&#39;,\&#39;\&#39;)&#39;, 0)"--%>
+<%--                                                    id="ctl00_ContentPlaceHolder1_ctl00_ddlChonNHHK" class="DropDown"--%>
+<%--                                                    style="height:20px;width:215px;">--%>
+<%--                                                <option selected="selected" value="20212">Học kỳ 2 - Năm học 2021-2022--%>
+<%--                                                </option>--%>
+<%--                                                <option value="20211">Học kỳ 1 - Năm học 2021-2022</option>--%>
+<%--                                                <option value="20203">Học kỳ 3 - Năm học 2020-2021</option>--%>
+                                                <span class="DropDown" style="height:20px;width:215px;font-size: 10pt">Học kỳ 2 - Năm học 2020-2021</span>
 
                                             </select></td>
                                     </tr>
                                     <tr>
                                         <td align="left" style="font-size: 10px">
-                                            <select name="ctl00$ContentPlaceHolder1$ctl00$ddlLoai"
-                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$ddlLoai\&#39;,\&#39;\&#39;)&#39;, 0)"
-                                                    id="ctl00_ContentPlaceHolder1_ctl00_ddlLoai" class="DropDown"
-                                                    style="width:150px;">
-                                                <option selected="selected" value="0">TKB theo tuần</option>
-                                                <option value="2">TKB Toàn Trường</option>
-                                                <option value="1">TKB học kỳ cá nhân</option>
+<%--                                            <select name="ctl00$ContentPlaceHolder1$ctl00$ddlLoai"--%>
+<%--                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$ddlLoai\&#39;,\&#39;\&#39;)&#39;, 0)"--%>
+<%--                                                    id="ctl00_ContentPlaceHolder1_ctl00_ddlLoai" class="DropDown"--%>
+<%--                                                    style="width:150px;">--%>
+                                                <span class="DropDown" style="width:150px;">TKB theo tuần</span>
+<%--                                                <option value="2">TKB Toàn Trường</option>--%>
+<%--                                                <option value="1">TKB học kỳ cá nhân</option>--%>
 
                                             </select>
 
 
                                             <select name="ctl00$ContentPlaceHolder1$ctl00$ddlTuan"
-                                                    onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ctl00$ddlTuan\&#39;,\&#39;\&#39;)&#39;, 0)"
                                                     id="ctl00_ContentPlaceHolder1_ctl00_ddlTuan" class="DropDown"
-                                                    style="width:300px;">
-                                                <option value="Tuần 26 [Từ 07/02/2022 -- Đến 13/02/2022]">Tuần 26 [Từ
-                                                    07/02/2022 -- Đến 13/02/2022]
-                                                </option>
-                                                <option value="Tuần 27 [Từ 14/02/2022 -- Đến 20/02/2022]">Tuần 27 [Từ
-                                                    14/02/2022 -- Đến 20/02/2022]
-                                                </option>
-                                                <option value="Tuần 28 [Từ 21/02/2022 -- Đến 27/02/2022]">Tuần 28 [Từ
-                                                    21/02/2022 -- Đến 27/02/2022]
-                                                </option>
-                                                <option value="Tuần 29 [Từ 28/02/2022 -- Đến 06/03/2022]">Tuần 29 [Từ
-                                                    28/02/2022 -- Đến 06/03/2022]
-                                                </option>
-                                                <option value="Tuần 30 [Từ 07/03/2022 -- Đến 13/03/2022]">Tuần 30 [Từ
-                                                    07/03/2022 -- Đến 13/03/2022]
-                                                </option>
-                                                <option selected="selected"
-                                                        value="Tuần 31 [Từ 14/03/2022 -- Đến 20/03/2022]">Tuần 31 [Từ
-                                                    14/03/2022 -- Đến 20/03/2022]
-                                                </option>
-                                                <option value="Tuần 32 [Từ 21/03/2022 -- Đến 27/03/2022]">Tuần 32 [Từ
-                                                    21/03/2022 -- Đến 27/03/2022]
-                                                </option>
-                                                <option value="Tuần 33 [Từ 28/03/2022 -- Đến 03/04/2022]">Tuần 33 [Từ
-                                                    28/03/2022 -- Đến 03/04/2022]
-                                                </option>
-                                                <option value="Tuần 34 [Từ 04/04/2022 -- Đến 10/04/2022]">Tuần 34 [Từ
-                                                    04/04/2022 -- Đến 10/04/2022]
-                                                </option>
-                                                <option value="Tuần 35 [Từ 11/04/2022 -- Đến 17/04/2022]">Tuần 35 [Từ
-                                                    11/04/2022 -- Đến 17/04/2022]
-                                                </option>
-                                                <option value="Tuần 36 [Từ 18/04/2022 -- Đến 24/04/2022]">Tuần 36 [Từ
-                                                    18/04/2022 -- Đến 24/04/2022]
-                                                </option>
-                                                <option value="Tuần 37 [Từ 25/04/2022 -- Đến 01/05/2022]">Tuần 37 [Từ
-                                                    25/04/2022 -- Đến 01/05/2022]
-                                                </option>
-                                                <option value="Tuần 38 [Từ 02/05/2022 -- Đến 08/05/2022]">Tuần 38 [Từ
-                                                    02/05/2022 -- Đến 08/05/2022]
-                                                </option>
-                                                <option value="Tuần 39 [Từ 09/05/2022 -- Đến 15/05/2022]">Tuần 39 [Từ
-                                                    09/05/2022 -- Đến 15/05/2022]
-                                                </option>
-                                                <option value="Tuần 40 [Từ 16/05/2022 -- Đến 22/05/2022]">Tuần 40 [Từ
-                                                    16/05/2022 -- Đến 22/05/2022]
-                                                </option>
-                                                <option value="Tuần 41 [Từ 23/05/2022 -- Đến 29/05/2022]">Tuần 41 [Từ
-                                                    23/05/2022 -- Đến 29/05/2022]
-                                                </option>
-                                                <option value="Tuần 42 [Từ 30/05/2022 -- Đến 05/06/2022]">Tuần 42 [Từ
-                                                    30/05/2022 -- Đến 05/06/2022]
-                                                </option>
-                                                <option value="Tuần 43 [Từ 06/06/2022 -- Đến 12/06/2022]">Tuần 43 [Từ
-                                                    06/06/2022 -- Đến 12/06/2022]
-                                                </option>
-                                                <option value="Tuần 44 [Từ 13/06/2022 -- Đến 19/06/2022]">Tuần 44 [Từ
-                                                    13/06/2022 -- Đến 19/06/2022]
-                                                </option>
-                                                <option value="Tuần 45 [Từ 20/06/2022 -- Đến 26/06/2022]">Tuần 45 [Từ
-                                                    20/06/2022 -- Đến 26/06/2022]
-                                                </option>
-                                                <option value="Tuần 46 [Từ 27/06/2022 -- Đến 03/07/2022]">Tuần 46 [Từ
-                                                    27/06/2022 -- Đến 03/07/2022]
-                                                </option>
-                                                <option value="Tuần 47 [Từ 04/07/2022 -- Đến 10/07/2022]">Tuần 47 [Từ
-                                                    04/07/2022 -- Đến 10/07/2022]
-                                                </option>
-
+                                                    style="width:300px;"
+                                            onchange = "getIdTuanHoc()">
                                             </select>
 
 
@@ -892,7 +826,7 @@
                                 <div id="ctl00_ContentPlaceHolder1_ctl00_pnlTuan">
 
 
-                                    <table id="ctl00_ContentPlaceHolder1_ctl00_Table1" class="classTable"
+                                    <table id="TKB" class="classTable"
                                            cellspacing="0" cellpadding="1" border="0"
                                            style="border-color:#999999;border-width:1px;border-style:Solid;height:100%;width:100%;border-collapse:collapse;">
                                         <thead>
@@ -1412,24 +1346,24 @@
                                             </td>
                                             <td align="left">
                                                 <div style="text-align: left">
-                                                    <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnDt"
-                                                           value="Tuần Đầu" id="ctl00_ContentPlaceHolder1_ctl00_btnDt"
-                                                           class="DefaultButton">
-                                                    <input type="submit"
-                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTrangTruoc"
-                                                           value="Tuần Trước"
-                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTrangTruoc"
-                                                           class="DefaultButton">
-                                                    <input type="submit"
-                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanToi"
-                                                           value="Tuần Kế"
-                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanToi"
-                                                           class="DefaultButton">
-                                                    <input type="submit"
-                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanCuoi"
-                                                           value="Tuần Cuối"
-                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanCuoi"
-                                                           class="DefaultButton">
+<%--                                                    <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnDt"--%>
+<%--                                                           value="Tuần Đầu" id="ctl00_ContentPlaceHolder1_ctl00_btnDt"--%>
+<%--                                                           class="DefaultButton">--%>
+<%--                                                    <input type="submit"--%>
+<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTrangTruoc"--%>
+<%--                                                           value="Tuần Trước"--%>
+<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTrangTruoc"--%>
+<%--                                                           class="DefaultButton">--%>
+<%--                                                    <input type="submit"--%>
+<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanToi"--%>
+<%--                                                           value="Tuần Kế"--%>
+<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanToi"--%>
+<%--                                                           class="DefaultButton">--%>
+<%--                                                    <input type="submit"--%>
+<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanCuoi"--%>
+<%--                                                           value="Tuần Cuối"--%>
+<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanCuoi"--%>
+<%--                                                           class="DefaultButton">--%>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1481,8 +1415,8 @@
                                 </div>
 
 
-                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblNoteUpdate" class="Label"
-                                      style="color:Blue;font-weight:bold;font-style:italic;text-align: right;">( Dữ liệu được cập nhật vào lúc: 21:30 Ngày: 7/3/2022)</span>
+<%--                                <span id="ctl00_ContentPlaceHolder1_ctl00_lblNoteUpdate" class="Label"--%>
+<%--                                      style="color:Blue;font-weight:bold;font-style:italic;text-align: right;">( Dữ liệu được cập nhật vào lúc: 21:30 Ngày: 7/3/2022)</span>--%>
 
                             </div>
 

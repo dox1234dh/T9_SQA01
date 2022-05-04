@@ -424,6 +424,10 @@ function luudk() {
         alert("Chưa đủ tối thiểu 14 tín chỉ để lưu đăng ký")
         return;
     }
+    if(totalTc > 22){
+        alert("Số lượng tín chỉ quá 22 tín, không thể lưu đăng ký")
+        return;
+    }
     // console.log(dataSend)
     $.ajax({
         type: 'POST',

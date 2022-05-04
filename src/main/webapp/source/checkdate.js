@@ -1,51 +1,51 @@
-﻿    //===============*********** Check valid date ************================//
-    var dtCh= "/";
-    var minYear=1900;
-    var maxYear=2100;
-    var erNotFormat, erDay, erMonth, erOutYear, ands, enterDate, Compare;
-    function setValue(notformat, notday, notmonth, outyear, and, enterdate, compare )
-    {
-        erNotFormat=notformat;
-        erDay=notday;
-        erMonth=notmonth;
-        erOutYear=outyear;
-        ands=and;
-        enterDate=enterdate;
-        Compare=compare;
-    }
-    function isInteger(s)
-    {
-	    var i;
-        for (i = 0; i < s.length; i++)
-        {   
-            var c = s.charAt(i);
-            if (((c < "0") || (c > "9"))) return false;
-        }
-        return true;
-    }
-    function stripCharsInBag(s, bag)
-    {
-	    var i;
-        var returnString = "";
-        for (i = 0; i < s.length; i++){   
-            var c = s.charAt(i);
-            if (bag.indexOf(c) == -1) returnString += c;
-        }
-        return returnString;
-    }
-    function daysInFebruary (year)
-    {
-        return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
-    }
-    function DaysArray(n) 
-    {
-	    for (var i = 1; i <= n; i++) 
-	    {
-		    this[i] = 31
-		    if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
-		    if (i==2) {this[i] = 29}
-       } 
-       return this
+﻿//===============*********** Check valid date ************================//
+var dtCh= "/";
+var minYear=1900;
+var maxYear=2100;
+var erNotFormat, erDay, erMonth, erOutYear, ands, enterDate, Compare;
+function setValue(notformat, notday, notmonth, outyear, and, enterdate, compare )
+{
+erNotFormat=notformat;
+erDay=notday;
+erMonth=notmonth;
+erOutYear=outyear;
+ands=and;
+enterDate=enterdate;
+Compare=compare;
+}
+function isInteger(s)
+{
+	var i;
+for (i = 0; i < s.length; i++)
+{ 
+var c = s.charAt(i);
+if (((c < "0") || (c > "9"))) return false;
+}
+return true;
+}
+function stripCharsInBag(s, bag)
+{
+	var i;
+var returnString = "";
+for (i = 0; i < s.length; i++){ 
+var c = s.charAt(i);
+if (bag.indexOf(c) == -1) returnString += c;
+}
+return returnString;
+}
+function daysInFebruary (year)
+{
+return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+}
+function DaysArray(n) 
+{
+	for (var i = 1; i <= n; i++) 
+	{
+		this[i] = 31
+		if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+		if (i==2) {this[i] = 29}
+ } 
+ return this
     }
     function isDate(dtStr)
     {
