@@ -1344,26 +1344,30 @@
                                             <td>
                                                 <span id="ctl00_ContentPlaceHolder1_ctl00_lblmontrung" class="Label">Môn học chỉ trùng một vài tiết</span>
                                             </td>
-                                            <td align="left">
+                                            <td align="center">
                                                 <div style="text-align: left">
-<%--                                                    <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btnDt"--%>
-<%--                                                           value="Tuần Đầu" id="ctl00_ContentPlaceHolder1_ctl00_btnDt"--%>
-<%--                                                           class="DefaultButton">--%>
-<%--                                                    <input type="submit"--%>
-<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTrangTruoc"--%>
-<%--                                                           value="Tuần Trước"--%>
-<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTrangTruoc"--%>
-<%--                                                           class="DefaultButton">--%>
-<%--                                                    <input type="submit"--%>
-<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanToi"--%>
-<%--                                                           value="Tuần Kế"--%>
-<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanToi"--%>
-<%--                                                           class="DefaultButton">--%>
-<%--                                                    <input type="submit"--%>
-<%--                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanCuoi"--%>
-<%--                                                           value="Tuần Cuối"--%>
-<%--                                                           id="ctl00_ContentPlaceHolder1_ctl00_btnTuanCuoi"--%>
-<%--                                                           class="DefaultButton">--%>
+                                                    <input type="button" name="ctl00$ContentPlaceHolder1$ctl00$btnDt"
+                                                           value="Tuần Đầu" id="btnStart"
+                                                           class="DefaultButton"
+                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC26');getApiTkb('TUANHOC26')}">
+                                                    <input type="button"
+                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTrangTruoc"
+                                                           value="Tuần Trước"
+                                                           id="btnBefore"
+                                                           class="DefaultButton"
+                                                           onclick="btnbefore()">
+                                                    <input type="button"
+                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanToi"
+                                                           value="Tuần Kế"
+                                                           id="btnAfter"
+                                                           class="DefaultButton"
+                                                           onclick="btnafter()">
+                                                    <input type="button"
+                                                           name="ctl00$ContentPlaceHolder1$ctl00$btnTuanCuoi"
+                                                           value="Tuần Cuối"
+                                                           id="btnEnd"
+                                                           class="DefaultButton"
+                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC47');getApiTkb('TUANHOC47')}">
                                                 </div>
                                             </td>
                                         </tr>

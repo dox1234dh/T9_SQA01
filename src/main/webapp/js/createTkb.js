@@ -196,3 +196,28 @@ function getNgayHoc(data) {
             break;
     }
 }
+
+function btnafter() {
+    let tuanhoc = $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val();
+    let arr = tuanhoc.split("C")
+    let so = parseInt(arr[1]);
+    console.log(so)
+    if(so<=47)
+        so+=1;
+    let result = "TUANHOC" + so;
+    console.log(result)
+    $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
+    getApiTkb(result)
+}
+function btnbefore() {
+    let tuanhoc = $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val()
+    let arr = tuanhoc.split("C")
+    let so = parseInt(arr[1]);
+    console.log(so)
+    if(so>=27)
+        so-=1;
+    let result = "TUANHOC" + so;
+    console.log(result)
+    $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
+    getApiTkb(result)
+}
