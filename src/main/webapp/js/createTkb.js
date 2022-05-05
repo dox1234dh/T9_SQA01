@@ -60,30 +60,36 @@ function getIdTuanHoc() {
 function createTkb(data) {
     let flag = 0;
     let index;
+    let location;
     let dataTkb = data
     // console.log(dataTkb)
     let content = "<tbody>"
     for(let i=0;i<12;++i){
         index = 9;
+        location = 0;
         content += "<tr>\n" +
             "<td title=\"Tiết "+ (i+1) +"\" align=\"center\" style=\"color:White;background-color:#6699cc;border-color:Gray;border-width:1px;border-style:solid;height:22px;width:50px;\">\n" +
             "    Tiết " + (i+1)+ "\n" +
             "</td>\n";
         if(flag >0) {
             index = index - flag;
+            location = flag;
             flag = 0;
         }
         for(let j = 2 ;j < index; j++){
             let check = false;
             for(let z = 0;z<dataTkb.length;++z){
                 let kiphoc = getKipHoc(dataTkb[z])*2-2;
-                let ngayhoc = getNgayHoc(dataTkb[z])%8+1;
+                let ngayhoc = getNgayHoc(dataTkb[z]);
+                if(ngayhoc>index)
+                    ngayhoc -= flag;
                 if(i === kiphoc && j === ngayhoc){
+                    let thu = ngayhoc<8?"Thứ " + ngayhoc:"Chủ nhật";
                     content += "<td onmouseover=\"ddrivetip('" +
                         dataTkb[z].lopHocPhan.maLopHocPhan + "','" +
                         dataTkb[z].lopHocPhan.monHocKiHoc.monHoc.tenMonHoc+"','" +
                         dataTkb[z].lopHocPhan.monHocKiHoc.monHoc.maMonHoc +"', '" +
-                        "Thứ " + ngayhoc+"','" +
+                        thu +"','" +
                         dataTkb[z].lopHocPhan.monHocKiHoc.monHoc.soTc+ "','"+
                         dataTkb[z].phongHoc.tenPhongHoc+"','" +
                         kiphoc+
@@ -166,6 +172,27 @@ function getKipHoc(data) {
     return parseInt(result[1]);
 }
 function getNgayHoc(data) {
-    let result = data.ngayHoc.maNgayHoc.split("C");
-    return parseInt(result[1]);
+    switch (data.ngayHoc.moTa){
+        case "Hai":
+            return 2;
+            break;
+        case "Ba":
+            return 3;
+            break;
+        case "Bốn":
+            return 4;
+            break;
+        case "Năm":
+            return 5;
+            break;
+        case "Sáu":
+            return 6;
+            break;
+        case "Bảy":
+            return 7;
+            break;
+        case "CN":
+            return 8;
+            break;
+    }
 }
