@@ -208,6 +208,16 @@ function btnafter() {
     console.log(result)
     $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
     getApiTkb(result)
+    $('#btnAfter').attr('disabled',false);
+    $('#btnBefore').attr('disabled',false)
+    if(so !== 47){
+        $('#btnAfter').attr('disabled',false);
+        $('#btnBefore').attr('disabled',false)
+    }
+    if(so === 47){
+        $('#btnAfter').attr('disabled','disabled');
+        $('#btnBefore').attr('disabled',false)
+    }
 }
 function btnbefore() {
     let tuanhoc = $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val()
@@ -220,4 +230,13 @@ function btnbefore() {
     console.log(result)
     $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
     getApiTkb(result)
+    if(so !== 26){
+        $('#btnAfter').attr('disabled',false);
+        $('#btnBefore').attr('disabled',false)
+    }
+    if(so === 26){
+        $('#btnBefore').attr('disabled','disabled');
+        $('#btnAfter').attr('disabled',false);
+    }
+
 }

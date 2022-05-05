@@ -1349,7 +1349,10 @@
                                                     <input type="button" name="ctl00$ContentPlaceHolder1$ctl00$btnDt"
                                                            value="Tuần Đầu" id="btnStart"
                                                            class="DefaultButton"
-                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC26');getApiTkb('TUANHOC26')}">
+                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC26');
+                                                        getApiTkb('TUANHOC26');
+                                                        $('#btnBefore').attr('disabled','disabled');
+                                                        $('#btnAfter').attr('disabled',false)}">
                                                     <input type="button"
                                                            name="ctl00$ContentPlaceHolder1$ctl00$btnTrangTruoc"
                                                            value="Tuần Trước"
@@ -1367,7 +1370,10 @@
                                                            value="Tuần Cuối"
                                                            id="btnEnd"
                                                            class="DefaultButton"
-                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC47');getApiTkb('TUANHOC47')}">
+                                                           onclick="{$('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val('TUANHOC47');
+                                                        getApiTkb('TUANHOC47');
+                                                    $('#btnAfter').attr('disabled','disabled');
+                                                    $('#btnBefore').attr('disabled',false)}">
                                                 </div>
                                             </td>
                                         </tr>
