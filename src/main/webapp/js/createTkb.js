@@ -202,7 +202,7 @@ function btnafter() {
     let arr = tuanhoc.split("C")
     let so = parseInt(arr[1]);
     console.log(so)
-    if(so<=47)
+    if(so<47)
         so+=1;
     let result = "TUANHOC" + so;
     console.log(result)
