@@ -1065,7 +1065,7 @@
 
                             function btnLocTheoTenMh_click() {
                                 var monHocLoc = document.getElementById("txtMaMH1");
-                                if (monHocLoc.value == "") {
+                                if (monHocLoc.value === "") {
                                     ready("%20")
                                 } else {
                                     // document.body.style.cursor = 'wait';

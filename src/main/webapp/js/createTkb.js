@@ -64,7 +64,7 @@ function createTkb(data) {
     let index;
     let location;
     let dataTkb = data
-    // console.log(dataTkb)
+    console.log(dataTkb)
     let content = "<tbody>"
     for(let i=0;i<12;++i){
         index = 9;
@@ -181,7 +181,7 @@ function getNgayHoc(data) {
         case "Ba":
             return 3;
             break;
-        case "Bốn":
+        case "Tư":
             return 4;
             break;
         case "Năm":
