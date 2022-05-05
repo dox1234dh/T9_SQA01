@@ -1,6 +1,8 @@
 $(document).ready(function () {
     setTuanHoc();
     getApiTkb("TUANHOC26");
+    $('#btnBefore').attr('disabled','disabled');
+    $('#btnAfter').attr('disabled',false);
 })
 function getApiTkb(id) {
     let path = "http://localhost:8081/dangkytinchi/xemthoikhoabieu/" + localStorage.getItem("masv");
