@@ -54,7 +54,7 @@ function setTuanHoc() {
                     let endWeek = mileStone[1].split('/');   //  dd/mm/yy -> ['dd','mm','yyyy']
                     let endDay = new Date('2022',endWeek[1],endWeek[0]);
                     if(startDay<=today && today <=endDay){
-                        console.log(data.data[i].maTuanHoc);
+                        // console.log(data.data[i].maTuanHoc);
                         idTuanHocToday = data.data[i].maTuanHoc;
                         getApiTkb(data.data[i].maTuanHoc);
                         break;
@@ -76,7 +76,7 @@ function setTuanHoc() {
 function getIdTuanHoc() {
     let e = document.getElementById("ctl00_ContentPlaceHolder1_ctl00_ddlTuan");
     let idTuanHoc = e.value;
-    console.log(idTuanHoc)
+    // console.log(idTuanHoc)
     if(idTuanHoc === "TUANHOC26"){
         $('#btnBefore').attr('disabled','disabled');
         $('#btnAfter').attr('disabled',false);
@@ -97,7 +97,7 @@ function createTkb(data) {
     let index;
     let location;
     let dataTkb = data
-    console.log(dataTkb)
+    // console.log(dataTkb)
     let content = "<tbody>"
     for(let i=0;i<12;++i){
         index = 9;
@@ -236,11 +236,11 @@ function btnafter() {
     let tuanhoc = $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val();
     let arr = tuanhoc.split("C")
     let so = parseInt(arr[1]);
-    console.log(so)
+    // console.log(so)
     if(so<47)
         so+=1;
     let result = "TUANHOC" + so;
-    console.log(result)
+    // console.log(result)
     $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
     getApiTkb(result)
     $('#btnAfter').attr('disabled',false);
@@ -258,11 +258,11 @@ function btnbefore() {
     let tuanhoc = $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val()
     let arr = tuanhoc.split("C")
     let so = parseInt(arr[1]);
-    console.log(so)
+    // console.log(so)
     if(so>=27)
         so-=1;
     let result = "TUANHOC" + so;
-    console.log(result)
+    // console.log(result)
     $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(result);
     getApiTkb(result)
     if(so !== 26){
