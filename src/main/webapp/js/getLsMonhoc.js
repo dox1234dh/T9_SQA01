@@ -182,7 +182,11 @@ function createTable(MaMH, TenMH, NMH, STC, STCHP, MaLop, SiSo, CL, Thu, TenKipH
                 "<input type='checkbox' checked onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
                 + "</td>"
     }
-
+    else if(CL === 0){
+        content += "<tr id='changeColor" + maLopHocPhan + "' style='background-color: #CCCCCC'>" + "<td width='25px' align='center'>" +
+            "<input type='checkbox' disabled onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
+            + "</td>"
+    }
     else
         content += "<tr id='changeColor" + maLopHocPhan + "'>" + "<td width='25px' align='center'>" +
         "<input type='checkbox' onchange='checkedComboBox(this.id)' id ="+ maLopHocPhan + ">"
@@ -362,7 +366,7 @@ function createTableDK(arrSave) {
             content += "<tr>"
             content += "<td style='width: 30px;' valign='middle' align='center'>" + (i+1) + "</td>"
             content += "<td style='width: 60px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.maMonHoc + "</td>"
-            content += "<td style='width: 180px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.tenMonHoc + "</td>"
+            content += "<td style='width: 180px;' valign='middle' align='left'>" + arrSave[i].monHocKiHoc.monHoc.tenMonHoc + "</td>"
             content += "<td style='width: 50px;' valign='middle' align='center' >"+ arrSave[i].maLopHocPhan +"</td>"
             content += "<td style='width: 30px;' valign='middle' align='center' ></td>"
             content += "<td style='width: 35px;' valign='middle' align='center'>" + arrSave[i].monHocKiHoc.monHoc.soTc + "</td>"

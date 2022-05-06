@@ -1,8 +1,5 @@
 $(document).ready(function () {
     setTuanHoc();
-    getApiTkb("TUANHOC26");
-    $('#btnBefore').attr('disabled','disabled');
-    $('#btnAfter').attr('disabled',false);
 })
 function getApiTkb(id) {
     let path = "http://localhost:8081/dangkytinchi/xemthoikhoabieu/" + localStorage.getItem("masv");
@@ -41,13 +38,36 @@ function setTuanHoc() {
                alert(data.error);
                location.reload();
             } else {
-               // console.log(data.data);
-               $.each(data.data, function (i, item) {
+                // console.log(data.data);
+                let idTuanHocToday;
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
+
+                today = new Date(yyyy,mm,dd);
+                for(let i =0 ;i<data.data.length; i++){
+                    //mota : dd/mm-dd/mm/yy
+                    let mileStone = data.data[i].moTa.split('-');
+                    let startWeek = mileStone[0].split('/'); //  dd/mm -> ['dd','mm']
+                    let startDay = new Date('2022',startWeek[1],startWeek[0]);
+                    let endWeek = mileStone[1].split('/');   //  dd/mm/yy -> ['dd','mm','yyyy']
+                    let endDay = new Date('2022',endWeek[1],endWeek[0]);
+                    if(startDay<=today && today <=endDay){
+                        console.log(data.data[i].maTuanHoc);
+                        idTuanHocToday = data.data[i].maTuanHoc;
+                        getApiTkb(data.data[i].maTuanHoc);
+                        break;
+                    }
+                }
+                $.each(data.data, function (i, item) {
                     $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').append($('<option>', {
                         value: item.maTuanHoc,
                         text : item.tenTuanHoc + " [" + item.moTa + "]"
                     }));
+
                });
+                $('#ctl00_ContentPlaceHolder1_ctl00_ddlTuan').val(idTuanHocToday);
             }
         },
     })
@@ -56,6 +76,19 @@ function setTuanHoc() {
 function getIdTuanHoc() {
     let e = document.getElementById("ctl00_ContentPlaceHolder1_ctl00_ddlTuan");
     let idTuanHoc = e.value;
+    console.log(idTuanHoc)
+    if(idTuanHoc === "TUANHOC26"){
+        $('#btnBefore').attr('disabled','disabled');
+        $('#btnAfter').attr('disabled',false);
+    }
+    else if(idTuanHoc === "TUANHOC47"){
+        $('#btnAfter').attr('disabled','disabled');
+        $('#btnBefore').attr('disabled',false)
+    }
+    else{
+        $('#btnAfter').attr('disabled',false);
+        $('#btnBefore').attr('disabled',false)
+    }
     getApiTkb(idTuanHoc)
 }
 
